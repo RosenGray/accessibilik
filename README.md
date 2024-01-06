@@ -19,7 +19,6 @@ Then use it in your app:
 ```js
 import Accessibilik from 'accessibilik';
 
-
 export default function App() {
 
   return (
@@ -95,7 +94,6 @@ Then use it in your app:
 
 ```js
 import Accessibilik from 'accessibilik';
-
 
 export default function App() {
 
