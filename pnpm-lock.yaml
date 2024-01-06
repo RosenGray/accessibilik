@@ -88,6 +88,9 @@ devDependencies:
   typescript:
     specifier: ^5.2.2
     version: 5.3.3
+  uglify-js:
+    specifier: ^3.17.4
+    version: 3.17.4
   vite:
     specifier: ^5.0.0
     version: 5.0.10(sass@1.69.6)
@@ -3081,6 +3084,12 @@ packages:
   /typescript@5.3.3:
     resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
     engines: {node: '>=14.17'}
+    hasBin: true
+    dev: true
+
+  /uglify-js@3.17.4:
+    resolution: {integrity: sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==}
+    engines: {node: '>=0.8.0'}
     hasBin: true
     dev: true
 

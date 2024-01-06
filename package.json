@@ -3,8 +3,14 @@
   "author": "Vladi Iokhim",
   "license": "MIT",
   "description": "A React-based web accessibility widget to enhance UI/UX for all users.",
-
-  "keywords": ["accessibility", "web-accessibility", "a11y", "React", "widget", "accessibilik"],
+  "keywords": [
+    "accessibility",
+    "web-accessibility",
+    "a11y",
+    "React",
+    "widget",
+    "accessibilik"
+  ],
   "version": "1.0.0",
   "type": "module",
   "main": "dist/main.js",
@@ -21,7 +27,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc --p ./tsconfig-build.json && vite build",
+    "build": "tsc --p ./tsconfig-build.json && vite build && npm run uglify && rm ./dist/main.js",
+    "uglify": "uglifyjs ./dist/main.js -o ./dist/main.min.js",
     "prepublishOnly": "npm run build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
@@ -48,6 +55,7 @@
     "rollup-plugin-visualizer": "^5.12.0",
     "sass": "^1.69.5",
     "typescript": "^5.2.2",
+    "uglify-js": "^3.17.4",
     "vite": "^5.0.0",
     "vite-plugin-dts": "^3.6.4",
     "vite-plugin-lib-inject-css": "^1.3.0",
