@@ -2,7 +2,34 @@
 
 ![Banner Image](banner.png)
 
+[![NPM](https://img.shields.io/npm/v/accessibilik.svg)](https://www.npmjs.com/package/accessibilik)
+[![GitHub license](https://img.shields.io/github/license/RosenGray/accessibilik)](https://github.com/RosenGray/accessibilik/blob/master/LICENSE)
+
+
+
 Accessibilik: A React-based web accessibility widget to enhance UI/UX for all users.
+
+```
+yarn add accessibilik
+npm install accessibilik
+```
+
+Then use it in your app:
+
+```js
+import Accessibilik from 'accessibilik';
+
+
+export default function App() {
+
+  return (
+    <div className="App">
+      <MyApp/>
+      <Accessibilik />
+    </div>
+  );
+}
+```
 
 ## 🔥 Features
 
@@ -58,3 +85,29 @@ Accessibilik: A React-based web accessibility widget to enhance UI/UX for all us
 📖 **Reading Guide**: Provides an on-screen, line-by-line guide to help users focus on the text, significantly aiding those with reading difficulties or visual tracking challenges, and enhancing overall comprehension.
 
 🎤 **Text To Speech**: Converts written text on the website into spoken words, facilitating access for users with visual impairments, reading difficulties, or those who prefer auditory learning.
+
+```
+yarn add accessibilik
+npm install accessibilik
+```
+
+Then use it in your app:
+
+```js
+import Accessibilik from 'accessibilik';
+
+
+export default function App() {
+
+  return (
+    <div className="App">
+      <MyApp/>
+      <Accessibilik />
+    </div>
+  );
+}
+```
+
+## License
+
+MIT Licensed. Copyright (c) Vladi Iokhim 2024.
