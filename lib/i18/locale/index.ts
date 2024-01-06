@@ -1,81 +1,65 @@
-import english from "./english.json";
-import hebrew from "./hebrew.json";
-import russian from "./russian.json";
-import chineseMandarin from "./chineseMandarin.json";
-import spanish from "./spanish.json";
-import arabic from "./arabic.json";
-import bengali from "./bengali.json";
-import hindi from "./hindi.json";
-import portuguese from "./portuguese.json";
-import japanese from "./japanese.json";
-import german from "./german.json";
-import chinese from "./chinese.json";
-import korean from "./korean.json";
-import french from "./french.json";
-import turkish from "./turkish.json";
-import vietnamese from "./vietnamese.json";
-import telugu from "./telugu.json";
-import marathi from "./marathi.json";
-import tamil from "./tamil.json";
-import italian from "./italian.json";
-import urdu from "./urdu.json";
-import gujarati from "./gujarati.json";
-import polish from "./polish.json";
-import ukrainian from "./ukrainian.json";
-import persian from "./persian.json";
-import malayalam from "./malayalam.json";
-import kannada from "./kannada.json";
-import oriya from "./oriya.json";
-import romanian from "./romanian.json";
-import azerbaijani from "./azerbaijani.json";
-import hausa from "./hausa.json";
-import burmese from "./burmese.json";
-import serboCroatian from "./serboCroatian.json";
-import thai from "./thai.json";
-import dutch from "./dutch.json";
-import yoruba from "./yoruba.json";
-import sindhi from "./sindhi.json";
+const baseUrl = 'https://accessibilik.s3.amazonaws.com/locale/';
+const loadJson = async (url:string) => {
+  const response = await fetch(url);
+  return response.json();
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const resources:any = {};
 
 
-const resources = {
-  he: { translation: hebrew },
-  en: { translation: english },
-  ru: { translation: russian },
-  zhcn: { translation: chineseMandarin },
-  es: { translation: spanish },
-  ar: { translation: arabic },
-  bn: { translation: bengali },
-  hi: { translation: hindi },
-  ptpt: { translation: portuguese },
-  ja: { translation: japanese },
-  de: { translation: german },
-  wuu: { translation: chinese },
-  ko: { translation: korean },
-  fr: { translation: french },
-  tr: { translation: turkish },
-  vi: { translation: vietnamese },
-  te: { translation: telugu },
-  mr: { translation: marathi },
-  ta: { translation: tamil },
-  it: { translation: italian },
-  ur: { translation: urdu },
-  gu: { translation: gujarati },
-  pl: { translation: polish },
-  uk: { translation: ukrainian },
-  fa: { translation: persian },
-  ml: { translation: malayalam },
-  kn: { translation: kannada },
-  or: { translation: oriya },
-  ro: { translation: romanian },
-  az: { translation: azerbaijani }, 
-  ha: { translation: hausa },
-  my: { translation: burmese },
-  sh: { translation: serboCroatian },
-  th: { translation: thai },
-  nl: { translation: dutch },
-  yo: { translation: yoruba },
-  sd: { translation: sindhi }
-};
+const languageArray = [
+  { lang: 'he', name: 'hebrew' },
+  { lang: 'en', name: 'english' },
+  { lang: 'ru', name: 'russian' },
+  { lang: 'zhcn', name: 'chineseMandarin' },
+  { lang: 'es', name: 'spanish' },
+  { lang: 'ar', name: 'arabic' },
+  { lang: 'bn', name: 'bengali' },
+  { lang: 'hi', name: 'hindi' },
+  { lang: 'ptpt', name: 'portuguese' },
+  { lang: 'ja', name: 'japanese' },
+  { lang: 'de', name: 'german' },
+  { lang: 'wuu', name: 'chinese' },
+  { lang: 'ko', name: 'korean' },
+  { lang: 'fr', name: 'french' },
+  { lang: 'tr', name: 'turkish' },
+  { lang: 'vi', name: 'vietnamese' },
+  { lang: 'te', name: 'telugu' },
+  { lang: 'mr', name: 'marathi' },
+  { lang: 'ta', name: 'tamil' },
+  { lang: 'it', name: 'italian' },
+  { lang: 'ur', name: 'urdu' },
+  { lang: 'gu', name: 'gujarati' },
+  { lang: 'pl', name: 'polish' },
+  { lang: 'uk', name: 'ukrainian' },
+  { lang: 'fa', name: 'persian' },
+  { lang: 'ml', name: 'malayalam' },
+  { lang: 'kn', name: 'kannada' },
+  { lang: 'or', name: 'oriya' },
+  { lang: 'ro', name: 'romanian' },
+  { lang: 'az', name: 'azerbaijani' },
+  { lang: 'ha', name: 'hausa' },
+  { lang: 'my', name: 'burmese' },
+  { lang: 'sh', name: 'serboCroatian' },
+  { lang: 'th', name: 'thai' },
+  { lang: 'nl', name: 'dutch' },
+  { lang: 'yo', name: 'yoruba' },
+  { lang: 'sd', name: 'sindhi' }
+];
+const promises = languageArray.map(langObj => {
+  const url = `${baseUrl}${langObj.name}.json`;
+  return loadJson(url);
+});
+
+Promise.all(promises).then((langs) => {
+  languageArray.forEach((item,index) => {
+    resources[item.lang] = {
+      translation:langs[index]
+    }
+  })
+})
+
 
 export default resources;
 
@@ -123,3 +107,4 @@ export const languages = [
 
 
 export const rtlLanguages = ["ar", "fa", "he", "he-IL", "ur"];
+
