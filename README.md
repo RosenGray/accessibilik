@@ -5,6 +5,8 @@
 Accessibilik: A React-based web accessibility widget to enhance UI/UX for all users.
 
 ## 🔥 Features
+
+## Content
 🇸🇨 **Multilingual Support**: Supports multiple languages **(38 languages) ** :  <p> Hebrew, English, Russian, Chinese mandarin, Spanish, Arabic, Bengali, Hindi, Portuguese, Japanese, German, Chinese, Korean, French, Turkish, Vietnamese, Telugu, Marathi, Tamil, Italian, Urdu, Gujarati, Polish, Ukrainian, Persian, Malayalam, Kannada, Oriya, Romanian, Azerbaijani, Hausa, Burmese, Serbocroatian, Thai, Dutch, Yoruba, Sindhi </p>
 
 🔤 **Adjust Font Size**: offers users the ability to easily modify text size for optimal readability, enhancing accessibility for those with visual impairments or reading preferences. This feature ensures a comfortable and inclusive browsing experience for all users.
@@ -25,7 +27,7 @@ Accessibilik: A React-based web accessibility widget to enhance UI/UX for all us
 
 🔤 **Word Spacing**: Offers the option to modify the spacing between words, aiding in better readability and visual comfort, especially for users with dyslexia or other reading challenges.
 
-🔍 **Zoom Button**: This feature enables a full-page zoom, magnifying both text and images for enhanced visibility, catering to users with visual impairments and improving overall accessibility.
+## 🖌 Colors
 
 🖌 **BlueLight Filter**: Reduces blue light emission from the screen, diminishing eye strain and improving viewing comfort, especially beneficial for users during extended use or in low-light conditions.
 
@@ -36,3 +38,23 @@ Accessibilik: A React-based web accessibility widget to enhance UI/UX for all us
 🖌 **HighContrast Button**: Enables a high-contrast color mode, enhancing text and image visibility against backgrounds, crucial for users with visual impairments or color vision deficiencies.
 
 🖌 **HighSaturation Button**: This feature enhances color saturation, making hues more vivid and distinct, which can be beneficial for users with color vision deficiencies or those who prefer more vibrant visuals.
+
+🖌 **LightContrast Button**: Offers a low-contrast color mode, ideal for users who find high contrast visually overwhelming, providing a softer and more comfortable viewing experience.
+
+🖌 **LowSaturation Button**: Reduces color intensity for a more subdued visual experience, ideal for users sensitive to bright colors or who prefer a less vibrant screen appearance.
+
+🖌 **Monochrome Button**: Converts the website's colors to grayscale, simplifying the visual experience and aiding users with color perception difficulties or those who prefer minimalistic design.
+
+🖌 **TextColor Picker**: Allows users to customize the color of text on the website, enabling personalization for better readability and comfort, especially helpful for those with visual impairments or color preferences.
+
+🖌 **Visual Impairment**: A dedicated mode tailored for users with visual impairments, incorporating features like enhanced contrast, larger text, and voice navigation to facilitate easier and more accessible web interaction.
+
+  ## 🧰 Tools
+
+🔍 **Zoom Button**: This feature enables a full-page zoom, magnifying both text and images for enhanced visibility, catering to users with visual impairments and improving overall accessibility.
+
+🖱 **Big Cursor**: Increases the size of the cursor on the website, enhancing its visibility and making navigation easier for users with visual impairments or those who struggle with fine motor control.
+
+📖 **Reading Guide**: Provides an on-screen, line-by-line guide to help users focus on the text, significantly aiding those with reading difficulties or visual tracking challenges, and enhancing overall comprehension.
+
+🎤 **Text To Speech**: Converts written text on the website into spoken words, facilitating access for users with visual impairments, reading difficulties, or those who prefer auditory learning.
