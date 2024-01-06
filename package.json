@@ -12,6 +12,13 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RosenGray/accessibilik.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RosenGray/accessibilik/issues"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc --p ./tsconfig-build.json && vite build",
