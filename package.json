@@ -13,7 +13,7 @@
   ],
   "version": "1.0.1",
   "type": "module",
-  "main": "dist/main.js",
+  "main": "dist/main.min.js",
   "types": "dist/main.d.ts",
   "files": [
     "dist"
