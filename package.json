@@ -28,7 +28,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc --p ./tsconfig-build.json && vite build && npm run uglify && rm ./dist/main.js",
-    "uglify": "uglifyjs ./dist/main.js -o ./dist/main.min.js",
+    "uglify": "uglifyjs ./dist/main.js -o ./dist/main.min.js --compress --mangle",
     "prepublishOnly": "npm run build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
