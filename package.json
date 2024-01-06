@@ -11,7 +11,7 @@
     "widget",
     "accessibilik"
   ],
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "main": "dist/main.min.js",
   "types": "dist/main.d.ts",
