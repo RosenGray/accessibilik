@@ -1,0 +1,39 @@
+{
+    "accessibility-menu": "ଅଭିଗମ୍ୟତା ମେନୁ",
+    "content": {
+      "title": "ସାମଗ୍ରୀ ସମନ୍ୱୟ",
+      "adjustFontSize": "ଫଣ୍ଟ ସାଇଜ୍ ସରିସଜାନ୍ତୁ",
+      "dyslexiaFont": "ଡିସଲେକ୍ସିଆ ଫଣ୍ଟ",
+      "fontWeight": "ଫଣ୍ଟର ଭାରସାମ୍ୟ",
+      "textAlignLeft": "ଟେକ୍ସଟ୍ ବାମରେ ସଜାନ୍ତୁ",
+      "textAlignCenter": "ଟେକ୍ସଟ୍ ମଧ୍ୟରେ ସଜାନ୍ତୁ",
+      "textAlignRight": "ଟେକ୍ସଟ୍ ଡାହାଣ ସଜାନ୍ତୁ",
+      "highlightLinks": "ଲିଙ୍କ୍ ହାଇଲାଇଟ୍ କରନ୍ତୁ",
+      "highlightTitles": "ଶୀର୍ଷକ ହାଇଲାଇଟ୍ କରନ୍ତୁ",
+      "letterSpacing": "ଅକ୍ଷର ଅନ୍ତର",
+      "wordsSpacing": "ଶବ୍ଦ ଅନ୍ତର",
+      "lineHeight": "ଲାଇନ୍ ଉଚ୍ଚତା",
+      "zoom": "ଜୁମ୍"
+    },
+    "colors": {
+      "title": "ରଙ୍ଗ ସମନ୍ୱୟ",
+      "blueLightFilter": "ନୀଳ ଆଲୋକ ଫିଲ୍ଟର୍",
+      "brightnessControl": "ଉଜ୍ଜ୍ୱଳତା ନିୟନ୍ତ୍ରଣ",
+      "darkContrast": "ଗାଢ଼ ବିପରୀତ୍ୟ",
+      "highContrast": "ଉଚ୍ଚ ବିପରୀତ୍ୟ",
+      "highSaturation": "ଉଚ୍ଚ ସନ୍ତୃପ୍ତି",
+      "lightContrast": "ହାଲକା ବିପରୀତ୍ୟ",
+      "lowSaturation": "ନିମ୍ନ ସନ୍ତୃପ୍ତି",
+      "monochrom": "ମୋନୋକ୍ରୋମ୍",
+      "textColorPicker": "ପାଠ୍ୟ ରଙ୍ଗ ଚୟନକାରୀ",
+      "visualImpairment": "ଦୃଷ୍ଟି ଅକ୍ଷମତା"
+    },
+    "tools": {
+      "title": "ଉପକରଣଗୁଡିକ",
+      "bigCursor": "ବଡ଼ କରସର୍",
+      "readingGuide": "ପଠନ ମାର୍ଗଦର୍ଶିକା",
+      "textToSpeach": "ପାଠ୍ୟ ରୁ ବକ୍ତୃତା",
+      "textToSpeachTooltip": "'ପାଠ୍ୟ ରୁ ବକ୍ତୃତା' ସକ୍ରିୟ କରିବା ପାଇଁ, ଏହି ବଟନ୍ କ୍ଲିକ୍ କର, ତାପରେ ତୁମର ପସନ୍ଦର ଭାଷା ବାଛ, ଏବଂ ସେହି ଭାଷାରେ ପାଠ୍ୟକୁ ହାଇଲାଇଟ୍ କର।"
+    }
+  }
+  

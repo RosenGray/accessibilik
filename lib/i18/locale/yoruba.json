@@ -1,0 +1,39 @@
+{
+    "accessibility-menu": "Akojọ aṣayan Wiwọle",
+    "content": {
+      "title": "Atunṣe Akoonu",
+      "adjustFontSize": "Ṣatunṣe Iwọn Fonti",
+      "dyslexiaFont": "Fonti fun Dyslexia",
+      "fontWeight": "Iwuwo Fonti",
+      "textAlignLeft": "Ṣe Alingimenti Ọrọ si Osì",
+      "textAlignCenter": "Ṣe Alingimenti Ọrọ si Aarin",
+      "textAlignRight": "Ṣe Alingimenti Ọrọ si Ọtun",
+      "highlightLinks": "Ṣe Ifihan Awọn Ọna asopọ",
+      "highlightTitles": "Ṣe Ifihan Awọn Akọle",
+      "letterSpacing": "Aaye Laarin Awọn Lẹta",
+      "wordsSpacing": "Aaye Laarin Awọn Ọrọ",
+      "lineHeight": "Iga Ila",
+      "zoom": "Sun-un Wo"
+    },
+    "colors": {
+      "title": "Atunṣe Awọ",
+      "blueLightFilter": "Ajọ Imọlẹ Bulu",
+      "brightnessControl": "Iṣakoso Imọlẹ",
+      "darkContrast": "Iyatọ Dudu",
+      "highContrast": "Iyatọ Giga",
+      "highSaturation": "Ibiti o Gaju",
+      "lightContrast": "Iyatọ Fẹẹrẹfẹ",
+      "lowSaturation": "Ibiti Kekere",
+      "monochrom": "Monochrome",
+      "textColorPicker": "Yan Awọ Ọrọ",
+      "visualImpairment": "Ailera Wiwo"
+    },
+    "tools": {
+      "title": "Awọn Irinṣẹ",
+      "bigCursor": "Kọsọ Nla",
+      "readingGuide": "Itọsọna Kika",
+      "textToSpeach": "Ọrọ si Ọrọ",
+      "textToSpeachTooltip": "Lati ṣiṣẹ 'Ọrọ si Ọrọ', tẹ bọtini yii, yan ede ti o fẹ, ki o si samisi ọrọ naa ni ede yẹn."
+    }
+  }
+  

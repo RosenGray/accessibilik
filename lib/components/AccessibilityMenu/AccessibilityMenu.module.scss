@@ -1,0 +1,46 @@
+.accAccessibilityMenu {
+  &__overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+  }
+}
+
+.accMenu{
+  position: fixed;
+  inset-inline-start: 20px;
+  bottom:100px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00000080;
+  opacity: 1;
+  transition: .3s;
+  z-index: 500000;
+  overflow: hidden;
+  background:#F9F9F9;// #e9eff4;
+  width: 500px;
+  line-height: 1;
+  font-size: 16px;
+  letter-spacing: .015em;
+  display: flex;
+  flex-direction: column;
+  [class$="-control"] {
+    border-radius: 0;
+    border:.3px solid #2C2639;
+  }
+  [class$="-indicatorContainer"] {
+    svg{
+      fill:#2C2639;
+    }
+  }
+  [class$="-indicatorSeparator"] {
+    background-color: #2C2639;
+  }
+  [class$="-menu"] {
+    margin-top: 0;
+    z-index: 100;
+  }
+}
+

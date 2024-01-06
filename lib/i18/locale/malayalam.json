@@ -1,0 +1,39 @@
+{
+    "accessibility-menu": "ലഭ്യത മെനു",
+    "content": {
+      "title": "ഉള്ളടക്ക ക്രമീകരണം",
+      "adjustFontSize": "ഫോണ്ട് വലുപ്പം ചെരുക്കുക",
+      "dyslexiaFont": "ഡിസ്ലെക്സിയ ഫോണ്ട്",
+      "fontWeight": "ഫോണ്ട് ഭാരം",
+      "textAlignLeft": "വാചകം ഇടത്തോട്ട് അടുക്കുക",
+      "textAlignCenter": "വാചകം മധ്യത്തോട്ട് അടുക്കുക",
+      "textAlignRight": "വാചകം വലത്തോട്ട് അടുക്കുക",
+      "highlightLinks": "ലിങ്കുകൾ ഹൈലൈറ്റ് ചെയ്യുക",
+      "highlightTitles": "തലക്കെട്ടുകൾ ഹൈലൈറ്റ് ചെയ്യുക",
+      "letterSpacing": "അക്ഷര ഇടവേള",
+      "wordsSpacing": "വാക്കുകളുടെ ഇടവേള",
+      "lineHeight": "വരിയുടെ ഉയരം",
+      "zoom": "സൂം"
+    },
+    "colors": {
+      "title": "നിറം ക്രമീകരണം",
+      "blueLightFilter": "നീല വെളിച്ചം ഫിൽട്ടർ",
+      "brightnessControl": "പ്രകാശം നിയന്ത്രണം",
+      "darkContrast": "ഇരുണ്ട കോണ്‍ട്രാസ്റ്റ്",
+      "highContrast": "ഉയർന്ന കോണ്‍ട്രാസ്റ്റ്",
+      "highSaturation": "ഉയർന്ന സാച്ചുറേഷൻ",
+      "lightContrast": "പ്രകാശമുള്ള കോണ്‍ട്രാസ്റ്റ്",
+      "lowSaturation": "താഴ്ന്ന സാച്ചുറേഷൻ",
+      "monochrom": "മോണോക്രോം",
+      "textColorPicker": "ടെക്സ്റ്റ് നിറം തിരഞ്ഞെടുപ്പ്",
+      "visualImpairment": "ദൃശ്യ പരിമിതി"
+    },
+    "tools": {
+      "title": "ഉപകരണങ്ങൾ",
+      "bigCursor": "വലിയ കർസർ",
+      "readingGuide": "വായന നിർദേശം",
+      "textToSpeach": "ടെക്സ്റ്റ് ടു സ്പീച്ച്",
+      "textToSpeachTooltip": "'ടെക്സ്റ്റ് ടു സ്പീച്ച്' സജീവമാക്കാൻ, ഈ ബട്ടൺ ക്ലിക്ക് ചെയ്യുക, ശേഷം താങ്കളുടെ ഇഷ്ടമുള്ള ഭാഷ തിരഞ്ഞെടുക്കുക, അതിൽ ടെക്സ്റ്റ് ഹൈലൈറ്റ് ചെയ്യുക."
+    }
+  }
+  

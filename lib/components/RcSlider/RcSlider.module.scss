@@ -1,0 +1,22 @@
+.accRcSlider {
+  position: absolute;
+//   inset-inline-end: -6px;
+left:0;
+right:0;
+
+  bottom:-6px;
+
+  & :global(.rc-slider-rail) {
+    background-color: var(--primary-color);
+  }
+  & :global(.rc-slider-handle) {
+    border: solid 2px var(--primary-color);
+    background-color: red;
+    opacity: 1;
+    width: 22px;
+    height: 22px;
+    margin-top: -9px;
+    // margin: 0;
+    // margin-inline-start: -9px;
+  }
+}

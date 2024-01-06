@@ -1,0 +1,39 @@
+{
+    "accessibility-menu": "Menu na Sauƙaƙewa",
+    "content": {
+      "title": "Daidaita Abun Ciki",
+      "adjustFontSize": "Daidaita Girman Rubutu",
+      "dyslexiaFont": "Rubutu na Dyslexia",
+      "fontWeight": "Nauyin Rubutu",
+      "textAlignLeft": "Daidaita Rubutu Zuwa Hagu",
+      "textAlignCenter": "Daidaita Rubutu a Tsakiya",
+      "textAlignRight": "Daidaita Rubutu Zuwa Dama",
+      "highlightLinks": "Haske Hanyoyin Haɗi",
+      "highlightTitles": "Haske Taken",
+      "letterSpacing": "Tazara Tsakanin Haruffa",
+      "wordsSpacing": "Tazara Tsakanin Kalmomi",
+      "lineHeight": "Tsawon Layi",
+      "zoom": "Zumawa"
+    },
+    "colors": {
+      "title": "Daidaita Launuka",
+      "blueLightFilter": "Tacewar Haske Shuɗi",
+      "brightnessControl": "Sarrafa Haske",
+      "darkContrast": "Bambanci Mai Duɗu",
+      "highContrast": "Bambanci Mai Yawa",
+      "highSaturation": "Cikar Saturation",
+      "lightContrast": "Bambanci Mai Haske",
+      "lowSaturation": "Saturation Mai Ƙasa",
+      "monochrom": "Monochrome",
+      "textColorPicker": "Mai Zaɓin Launi na Rubutu",
+      "visualImpairment": "Rashin Gani"
+    },
+    "tools": {
+      "title": "Kayan Aiki",
+      "bigCursor": "Alamar Nuni Mai Girma",
+      "readingGuide": "Jagora don Karatu",
+      "textToSpeach": "Rubutu Zuwa Jawabi",
+      "textToSpeachTooltip": "Don kunna 'Rubutu Zuwa Jawabi', danna wannan maɓallin, sai ka zaɓi yaren da kake so, sannan ka haskaka rubutun a cikin wannan yare."
+    }
+  }
+  

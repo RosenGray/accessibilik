@@ -1,0 +1,84 @@
+.accMenuContentBlock {
+  border: 0.3px solid #2c2639;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-height: calc(100vh / 3 - 83px);
+  justify-content: center;
+  flex-grow: 1;
+  transition: max-height 0.3s linear;
+  padding: 10px 5px 5px 5px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 10;
+  &:focus {
+    border: 1px solid #2c2639;
+  }
+  &.isExpanded {
+    cursor: auto;
+    flex: 1;
+    max-height: 100%;
+    border: none;
+
+    // max-height: calc(100vh / 3 + 250px );
+  }
+  &.isAccMenuContentActive:not(.isExpanded) {
+    display: none;
+  }
+  &__titleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    svg {
+      font-weight: bold;
+      width: 30px;
+      fill: #000;
+    }
+  }
+  &__title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0.2em;
+  }
+  &__expendButtonContainer {
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+    button {
+      font-size: 30px;
+      width: 80%;
+
+      margin: auto;
+      inset-inline-start: 5px;
+      height: 100%;
+
+      border: none;
+      outline: none;
+      background-color: var(--primary-color);
+      border-radius: 10px;
+      & > svg {
+        fill: white;
+        width: 24px;
+      }
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  &__content {
+    display: grid;
+    flex: 1;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: max-content;
+    padding: 10px;
+    column-gap: 0.8em;
+    overflow: auto;
+    row-gap: 1.5em;
+    align-self: baseline;
+    width: 100%;
+  }
+}

@@ -1,0 +1,91 @@
+.accButton {
+  aspect-ratio: 6/5;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  color: #000;
+  background: #fff;
+  border: 1px solid #ccc;
+  transition: all 0.5s ease;
+  position: relative;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    border-color: var(--primary-color);
+    outline: none;
+  }
+  &.isToggled {
+    background-color: var(--primary-color);
+    color: #fff;
+    svg {
+      fill: #fff;
+    }
+  }
+  &__title {
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+    color: inherit;
+    margin: auto;
+    margin-top: 10px;
+  }
+  &__icon {
+    width: 24px;
+    margin-bottom: 8px;
+    &--help {
+      position: absolute;
+      inset-inline-end: 0;
+      &:hover{
+        fill: red !important;
+      }
+      &:hover + span[data-tooltip]:after {
+        opacity: 1;
+        padding: 8px;
+        max-height: 10000px;
+        transition-duration: 300ms;
+      }
+    }
+  }
+  &__content {
+    align-self: flex-end;
+    width: 100%;
+    margin-top: auto;
+    flex: 0.8;
+  }
+  &__stats {
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    align-self: flex-end;
+    font-size: 14px;
+  }
+  span[data-tooltip] {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: help;
+    &:after {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+      content: attr(data-tooltip);
+      color: var(--primary-color);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      line-height: 1.5;
+      border-radius: 3px;
+      box-shadow: 0 0 5px 2px rgba(100, 100, 100, 0.6);
+      background-color: white;
+      z-index: 10;
+      word-wrap: break-word;
+      text-align: start;
+      transform: translateY(100%);
+      transition: all 150ms cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+  }
+}

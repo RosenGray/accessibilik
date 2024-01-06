@@ -1,0 +1,39 @@
+{
+    "accessibility-menu": "เมนูการเข้าถึง",
+    "content": {
+      "title": "ปรับเนื้อหา",
+      "adjustFontSize": "ปรับขนาดตัวอักษร",
+      "dyslexiaFont": "ฟอนต์สำหรับอ่านง่าย",
+      "fontWeight": "ความหนาของตัวอักษร",
+      "textAlignLeft": "จัดแนวข้อความชิดซ้าย",
+      "textAlignCenter": "จัดแนวข้อความกลาง",
+      "textAlignRight": "จัดแนวข้อความชิดขวา",
+      "highlightLinks": "เน้นลิงก์",
+      "highlightTitles": "เน้นหัวข้อ",
+      "letterSpacing": "ระยะห่างระหว่างตัวอักษร",
+      "wordsSpacing": "ระยะห่างระหว่างคำ",
+      "lineHeight": "ความสูงของบรรทัด",
+      "zoom": "ซูม"
+    },
+    "colors": {
+      "title": "การปรับสี",
+      "blueLightFilter": "ตัวกรองแสงสีฟ้า",
+      "brightnessControl": "การควบคุมความสว่าง",
+      "darkContrast": "คอนทราสต์สีเข้ม",
+      "highContrast": "คอนทราสต์สูง",
+      "highSaturation": "ความอิ่มตัวสูง",
+      "lightContrast": "คอนทราสต์สว่าง",
+      "lowSaturation": "ความอิ่มตัวต่ำ",
+      "monochrom": "โมโนโครม",
+      "textColorPicker": "ตัวเลือกสีข้อความ",
+      "visualImpairment": "ความบกพร่องทางการมองเห็น"
+    },
+    "tools": {
+      "title": "เครื่องมือ",
+      "bigCursor": "เคอร์เซอร์ขนาดใหญ่",
+      "readingGuide": "คู่มือการอ่าน",
+      "textToSpeach": "ข้อความเป็นเสียงพูด",
+      "textToSpeachTooltip": "เพื่อเปิดใช้งาน 'ข้อความเป็นเสียงพูด' กรุณาคลิกที่ปุ่มนี้ เลือกภาษาที่คุณต้องการ และไฮไลต์ข้อความในภาษานั้น"
+    }
+  }
+  

@@ -1,0 +1,39 @@
+{
+    "accessibility-menu": "Əlçatanlıq Menyusu",
+    "content": {
+      "title": "Məzmunun Tənzimlənməsi",
+      "adjustFontSize": "Şrift Ölçüsünü Tənzimlə",
+      "dyslexiaFont": "Disleksiya Şrifti",
+      "fontWeight": "Şrift Qalınlığı",
+      "textAlignLeft": "Mətni Sola Düzəlt",
+      "textAlignCenter": "Mətni Mərkəzə Düzəlt",
+      "textAlignRight": "Mətni Sağa Düzəlt",
+      "highlightLinks": "Keçidləri Vurğula",
+      "highlightTitles": "Başlıqları Vurğula",
+      "letterSpacing": "Hərf Aralığı",
+      "wordsSpacing": "Söz Aralığı",
+      "lineHeight": "Xətt Hündürlüyü",
+      "zoom": "Yaxınlaşdırma"
+    },
+    "colors": {
+      "title": "Rəng Tənzimlənməsi",
+      "blueLightFilter": "Mavi Işıq Filtri",
+      "brightnessControl": "Parlaqlıq Nəzarəti",
+      "darkContrast": "Qaranlıq Kontrast",
+      "highContrast": "Yüksək Kontrast",
+      "highSaturation": "Yüksək Doygunluq",
+      "lightContrast": "İşıqlı Kontrast",
+      "lowSaturation": "Aşağı Doygunluq",
+      "monochrom": "Monoxrom",
+      "textColorPicker": "Mətn Rəngi Seçici",
+      "visualImpairment": "Görmə Qüsurları"
+    },
+    "tools": {
+      "title": "Alətlər",
+      "bigCursor": "Böyük Kursor",
+      "readingGuide": "Oxu Bələdçisi",
+      "textToSpeach": "Mətni Nitqə Çevir",
+      "textToSpeachTooltip": "'Mətni Nitqə Çevir' funksiyasını aktivləşdirmək üçün, bu düyməni basın, seçdiyiniz dili seçin və sonra həmin dildə mətni seçin."
+    }
+  }
+  

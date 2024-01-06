@@ -1,0 +1,39 @@
+{
+    "accessibility-menu": "Erişilebilirlik Menüsü",
+    "content": {
+      "title": "İçerik Ayarı",
+      "adjustFontSize": "Yazı Tipi Boyutunu Ayarla",
+      "dyslexiaFont": "Disleksi Fontu",
+      "fontWeight": "Yazı Tipi Kalınlığı",
+      "textAlignLeft": "Metni Sola Hizala",
+      "textAlignCenter": "Metni Ortaya Hizala",
+      "textAlignRight": "Metni Sağa Hizala",
+      "highlightLinks": "Bağlantıları Vurgula",
+      "highlightTitles": "Başlıkları Vurgula",
+      "letterSpacing": "Harf Aralığı",
+      "wordsSpacing": "Kelime Aralığı",
+      "lineHeight": "Satır Yüksekliği",
+      "zoom": "Yakınlaştır"
+    },
+    "colors": {
+      "title": "Renk Ayarı",
+      "blueLightFilter": "Mavi Işık Filtresi",
+      "brightnessControl": "Parlaklık Kontrolü",
+      "darkContrast": "Koyu Kontrast",
+      "highContrast": "Yüksek Kontrast",
+      "highSaturation": "Yüksek Doygunluk",
+      "lightContrast": "Açık Kontrast",
+      "lowSaturation": "Düşük Doygunluk",
+      "monochrom": "Monokrom",
+      "textColorPicker": "Metin Renk Seçici",
+      "visualImpairment": "Görsel Engellilik"
+    },
+    "tools": {
+      "title": "Araçlar",
+      "bigCursor": "Büyük İmleç",
+      "readingGuide": "Okuma Rehberi",
+      "textToSpeach": "Metinden Konuşmaya",
+      "textToSpeachTooltip": "'Metinden Konuşmaya' aktive etmek için, lütfen bu butona tıklayın, ardından tercih ettiğiniz dili seçin ve o dildeki metni vurgulayın."
+    }
+  }
+  

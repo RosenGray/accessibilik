@@ -1,0 +1,39 @@
+{
+    "accessibility-menu": "அணுக்கமுடியும் மெனு",
+    "content": {
+      "title": "உள்ளடக்கத்தை சரிசெய்தல்",
+      "adjustFontSize": "எழுத்துரு அளவை சரி செய்",
+      "dyslexiaFont": "டிஸ்லெக்சியா எழுத்துரு",
+      "fontWeight": "எழுத்துரு திணிவு",
+      "textAlignLeft": "உரையை இடதுபுறம் சீர்செய்",
+      "textAlignCenter": "உரையை மையம் சீர்செய்",
+      "textAlignRight": "உரையை வலதுபுறம் சீர்செய்",
+      "highlightLinks": "இணைப்புகளை வலியுறுத்து",
+      "highlightTitles": "தலைப்புகளை வலியுறுத்து",
+      "letterSpacing": "எழுத்து இடைவெளி",
+      "wordsSpacing": "வார்த்தை இடைவெளி",
+      "lineHeight": "வரி உயரம்",
+      "zoom": "ஜூம்"
+    },
+    "colors": {
+      "title": "வண்ணங்களை சரிசெய்தல்",
+      "blueLightFilter": "நீல ஒளி வடிகட்டி",
+      "brightnessControl": "பிரகாசம் கட்டுப்பாடு",
+      "darkContrast": "இருண்ட பார்வை",
+      "highContrast": "உயர் பார்வை",
+      "highSaturation": "அதிக பார்வை",
+      "lightContrast": "லேசான பார்வை",
+      "lowSaturation": "குறைந்த பார்வை",
+      "monochrom": "ஒற்றை நிறம்",
+      "textColorPicker": "உரை வண்ணம் தேர்வு",
+      "visualImpairment": "பார்வை குறைபாடு"
+    },
+    "tools": {
+      "title": "கருவிகள்",
+      "bigCursor": "பெரிய கர்சர்",
+      "readingGuide": "வாசிப்பு வழிகாட்டி",
+      "textToSpeach": "உரையை பேச்சாக மாற்று",
+      "textToSpeachTooltip": "'உரையை பேச்சாக மாற்று' செயல்பாட்டை இயக்க, இந்த பொத்தானை அழுத்தவும், பின்னர் உங்கள் விருப்பமான மொழியை தேர்வு செய்து அந்த மொழியில் உள்ள உரையை வலியுறுத்தவும்."
+    }
+  }
+  

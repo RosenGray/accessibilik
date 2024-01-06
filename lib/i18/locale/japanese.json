@@ -1,0 +1,39 @@
+{
+    "accessibility-menu": "アクセシビリティメニュー",
+    "content": {
+      "title": "コンテンツの調整",
+      "adjustFontSize": "フォントサイズの調整",
+      "dyslexiaFont": "ディスレクシアフォント",
+      "fontWeight": "フォントの太さ",
+      "textAlignLeft": "テキストを左揃え",
+      "textAlignCenter": "テキストを中央揃え",
+      "textAlignRight": "テキストを右揃え",
+      "highlightLinks": "リンクのハイライト",
+      "highlightTitles": "タイトルのハイライト",
+      "letterSpacing": "文字間隔",
+      "wordsSpacing": "単語間隔",
+      "lineHeight": "行の高さ",
+      "zoom": "ズーム"
+    },
+    "colors": {
+      "title": "色の調整",
+      "blueLightFilter": "ブルーライトフィルター",
+      "brightnessControl": "明るさの調整",
+      "darkContrast": "ダークコントラスト",
+      "highContrast": "ハイコントラスト",
+      "highSaturation": "高彩度",
+      "lightContrast": "ライトコントラスト",
+      "lowSaturation": "低彩度",
+      "monochrom": "モノクロ",
+      "textColorPicker": "テキストカラーピッカー",
+      "visualImpairment": "視覚障害"
+    },
+    "tools": {
+      "title": "ツール",
+      "bigCursor": "大きなカーソル",
+      "readingGuide": "読書ガイド",
+      "textToSpeach": "テキストから音声へ",
+      "textToSpeachTooltip": "「テキストから音声へ」をアクティブにするには、このボタンをクリックし、好きな言語を選択した後、その言語のテキストをハイライトしてください。"
+    }
+  }
+  

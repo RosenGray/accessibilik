@@ -1,0 +1,36 @@
+%button {
+  background-color: transparent;
+  border:none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  svg{
+    fill:white;
+    font-weight: bold;
+    font-size: 2em;
+    width: 30px;
+  }
+}
+.accHeader {
+  height:60px;
+    background-color: #2C2639;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:.5em;
+    &__closeBtn{
+      @extend %button;
+    }
+    &__resetBtn{
+      @extend %button;
+    }
+    &__title{
+      color:white;
+      margin: 0;
+      font-size: 18px;
+    }
+    & > .acc-lang-select-container{
+      flex:1;
+    }
+}
+

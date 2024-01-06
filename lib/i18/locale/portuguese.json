@@ -1,0 +1,39 @@
+{
+    "accessibility-menu": "Menu de Acessibilidade",
+    "content": {
+      "title": "Ajuste de Conteúdo",
+      "adjustFontSize": "Ajustar Tamanho da Fonte",
+      "dyslexiaFont": "Fonte para Dislexia",
+      "fontWeight": "Peso da Fonte",
+      "textAlignLeft": "Alinhar Texto à Esquerda",
+      "textAlignCenter": "Alinhar Texto ao Centro",
+      "textAlignRight": "Alinhar Texto à Direita",
+      "highlightLinks": "Destacar Links",
+      "highlightTitles": "Destacar Títulos",
+      "letterSpacing": "Espaçamento entre Letras",
+      "wordsSpacing": "Espaçamento entre Palavras",
+      "lineHeight": "Altura da Linha",
+      "zoom": "Zoom"
+    },
+    "colors": {
+      "title": "Ajuste de Cores",
+      "blueLightFilter": "Filtro de Luz Azul",
+      "brightnessControl": "Controle de Brilho",
+      "darkContrast": "Contraste Escuro",
+      "highContrast": "Alto Contraste",
+      "highSaturation": "Alta Saturação",
+      "lightContrast": "Contraste Claro",
+      "lowSaturation": "Baixa Saturação",
+      "monochrom": "Monocromático",
+      "textColorPicker": "Seletor de Cor de Texto",
+      "visualImpairment": "Deficiência Visual"
+    },
+    "tools": {
+      "title": "Ferramentas",
+      "bigCursor": "Cursor Grande",
+      "readingGuide": "Guia de Leitura",
+      "textToSpeach": "Texto para Fala",
+      "textToSpeachTooltip": "Para ativar 'Texto para Fala', clique neste botão, escolha o idioma preferido e em seguida destaque o texto nesse idioma."
+    }
+  }
+  

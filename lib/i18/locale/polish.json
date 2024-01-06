@@ -1,0 +1,39 @@
+{
+    "accessibility-menu": "Menu dostępności",
+    "content": {
+      "title": "Dostosowanie zawartości",
+      "adjustFontSize": "Dostosuj rozmiar czcionki",
+      "dyslexiaFont": "Czcionka dla dyslektyków",
+      "fontWeight": "Grubość czcionki",
+      "textAlignLeft": "Wyrównaj tekst do lewej",
+      "textAlignCenter": "Wyrównaj tekst do środka",
+      "textAlignRight": "Wyrównaj tekst do prawej",
+      "highlightLinks": "Wyróżnij linki",
+      "highlightTitles": "Wyróżnij tytuły",
+      "letterSpacing": "Odstępy między literami",
+      "wordsSpacing": "Odstępy między słowami",
+      "lineHeight": "Wysokość linii",
+      "zoom": "Powiększenie"
+    },
+    "colors": {
+      "title": "Dostosowanie kolorów",
+      "blueLightFilter": "Filtr światła niebieskiego",
+      "brightnessControl": "Kontrola jasności",
+      "darkContrast": "Ciemny kontrast",
+      "highContrast": "Wysoki kontrast",
+      "highSaturation": "Wysoka nasycenie",
+      "lightContrast": "Jasny kontrast",
+      "lowSaturation": "Niska nasycenie",
+      "monochrom": "Monochromatyczny",
+      "textColorPicker": "Wybór koloru tekstu",
+      "visualImpairment": "Zaburzenia wzroku"
+    },
+    "tools": {
+      "title": "Narzędzia",
+      "bigCursor": "Duży kursor",
+      "readingGuide": "Przewodnik czytania",
+      "textToSpeach": "Tekst na mowę",
+      "textToSpeachTooltip": "Aby aktywować 'Tekst na mowę', kliknij ten przycisk, wybierz preferowany język, a następnie wyróżnij tekst w tym języku."
+    }
+  }
+  

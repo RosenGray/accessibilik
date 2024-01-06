@@ -1,0 +1,12 @@
+.accFooter {
+  height:30px;
+    background-color: #2C2639;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#fff;
+    & > a {
+      color:white;
+    }
+}
+

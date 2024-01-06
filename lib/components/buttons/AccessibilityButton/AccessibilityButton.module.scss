@@ -1,0 +1,38 @@
+.AccessibilityIcon {
+  background-color: var( --primary-color);
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px 0 rgb(37 44 97 / 15%),
+    0 2px 4px 0 rgb(93 100 148 / 20%);
+  position: fixed;
+  z-index: 500000;
+  inset-inline-start: 20px;
+  bottom: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  & > svg {
+    fill: var( --white);
+    width: 75%;
+    z-index: 1;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: 0;
+    width: 80%;
+    height: 80%;
+    border: 2px solid white;
+    background-color: var( --primary-color);
+    z-index: 0;
+    transform: translate(-50%, -50%);
+  }
+}

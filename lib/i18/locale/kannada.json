@@ -1,0 +1,39 @@
+{
+    "accessibility-menu": "ಸುಲಭತೆ ಮೆನು",
+    "content": {
+      "title": "ವಿಷಯ ಸರಿಪಡಿಸುವಿಕೆ",
+      "adjustFontSize": "ಫಾಂಟ್ ಗಾತ್ರ ಸರಿಹೊಂದಿಸು",
+      "dyslexiaFont": "ಡಿಸ್ಲೆಕ್ಸಿಯ ಫಾಂಟ್",
+      "fontWeight": "ಫಾಂಟ್ ತೂಕ",
+      "textAlignLeft": "ಪಠ್ಯವನ್ನು ಎಡಗಡೆ ಹೊಂದಿಸು",
+      "textAlignCenter": "ಪಠ್ಯವನ್ನು ಮಧ್ಯದಲ್ಲಿ ಹೊಂದಿಸು",
+      "textAlignRight": "ಪಠ್ಯವನ್ನು ಬಲಗಡೆ ಹೊಂದಿಸು",
+      "highlightLinks": "ಲಿಂಕ್‌ಗಳನ್ನು ಹೈಲೈಟ್ ಮಾಡಿ",
+      "highlightTitles": "ಶೀರ್ಷಿಕೆಗಳನ್ನು ಹೈಲೈಟ್ ಮಾಡಿ",
+      "letterSpacing": "ಅಕ್ಷರಗಳ ಅಂತರ",
+      "wordsSpacing": "ಪದಗಳ ಅಂತರ",
+      "lineHeight": "ಸಾಲಿನ ಎತ್ತರ",
+      "zoom": "ಝೂಮ್"
+    },
+    "colors": {
+      "title": "ಬಣ್ಣ ಸರಿಹೊಂದಿಸುವಿಕೆ",
+      "blueLightFilter": "ನೀಲಿ ಬೆಳಕಿನ ಫಿಲ್ಟರ್",
+      "brightnessControl": "ಪ್ರಕಾಶ ನಿಯಂತ್ರಣ",
+      "darkContrast": "ಕಪ್ಪು ವಿರೋಧಾಭಾಸ",
+      "highContrast": "ಹೆಚ್ಚಿನ ವಿರೋಧಾಭಾಸ",
+      "highSaturation": "ಹೆಚ್ಚಿನ ಸ್ಯಾಚುರೇಶನ್",
+      "lightContrast": "ಹಗುರ ವಿರೋಧಾಭಾಸ",
+      "lowSaturation": "ಕಡಿಮೆ ಸ್ಯಾಚುರೇಶನ್",
+      "monochrom": "ಏಕವರ್ಣ",
+      "textColorPicker": "ಪಠ್ಯ ಬಣ್ಣ ಆಯ್ಕೆ",
+      "visualImpairment": "ದೃಷ್ಟಿ ದೋಷ"
+    },
+    "tools": {
+      "title": "ಉಪಕರಣಗಳು",
+      "bigCursor": "ದೊಡ್ಡ ಕರ್ಸರ್",
+      "readingGuide": "ಓದುವ ಮಾರ್ಗದರ್ಶಿ",
+      "textToSpeach": "ಪಠ್ಯದಿಂದ ಭಾಷಣಕ್ಕೆ",
+      "textToSpeachTooltip": "'ಪಠ್ಯದಿಂದ ಭಾಷಣಕ್ಕೆ' ಸಕ್ರಿಯಗೊಳಿಸಲು, ಈ ಬಟನ್ ಒತ್ತಿ, ನಂತರ ನಿಮ್ಮ ಆದ್ಯತೆಯ ಭಾಷೆ ಆಯ್ಕೆ ಮಾಡಿ, ಆ ಭಾಷೆಯಲ್ಲಿನ ಪಠ್ಯವನ್ನು ಹೈಲೈಟ್ ಮಾಡಿ."
+    }
+  }
+  

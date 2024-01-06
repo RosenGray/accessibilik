@@ -1,0 +1,39 @@
+{
+    "accessibility-menu": "एक्सेसिबिलिटी मेनू",
+    "content": {
+      "title": "सामग्री समायोजन",
+      "adjustFontSize": "फ़ॉन्ट आकार समायोजित करें",
+      "dyslexiaFont": "डिस्लेक्सिया फ़ॉन्ट",
+      "fontWeight": "फ़ॉन्ट वजन",
+      "textAlignLeft": "टेक्स्ट को बाएँ संरेखित करें",
+      "textAlignCenter": "टेक्स्ट को केंद्रित करें",
+      "textAlignRight": "टेक्स्ट को दाएँ संरेखित करें",
+      "highlightLinks": "लिंक्स को हाइलाइट करें",
+      "highlightTitles": "शीर्षकों को हाइलाइट करें",
+      "letterSpacing": "अक्षरों की जगह",
+      "wordsSpacing": "शब्दों की जगह",
+      "lineHeight": "पंक्ति की ऊँचाई",
+      "zoom": "ज़ूम"
+    },
+    "colors": {
+      "title": "रंग समायोजन",
+      "blueLightFilter": "नीली रोशनी फ़िल्टर",
+      "brightnessControl": "चमक नियंत्रण",
+      "darkContrast": "गहरा विपरीत",
+      "highContrast": "उच्च विपरीत",
+      "highSaturation": "उच्च संतृप्ति",
+      "lightContrast": "हल्का विपरीत",
+      "lowSaturation": "निम्न संतृप्ति",
+      "monochrom": "एकरंगी",
+      "textColorPicker": "टेक्स्ट रंग चयनकर्ता",
+      "visualImpairment": "दृष्टि दोष"
+    },
+    "tools": {
+      "title": "उपकरण",
+      "bigCursor": "बड़ा कर्सर",
+      "readingGuide": "पढ़ने का निर्देश",
+      "textToSpeach": "टेक्स्ट से भाषण",
+      "textToSpeachTooltip": "‘टेक्स्ट से भाषण’ सक्रिय करने के लिए, कृपया इस बटन पर क्लिक करें, फिर अपनी पसंदीदा भाषा चुनें, और उस भाषा में टेक्स्ट हाइलाइट करें।"
+    }
+  }
+  

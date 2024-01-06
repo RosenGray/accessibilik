@@ -1,0 +1,39 @@
+{
+    "accessibility-menu": "Meniu Accesibilitate",
+    "content": {
+      "title": "Ajustare Conținut",
+      "adjustFontSize": "Ajustează Dimensiunea Fontului",
+      "dyslexiaFont": "Font pentru Dislexie",
+      "fontWeight": "Greutate Font",
+      "textAlignLeft": "Aliniază Textul la Stânga",
+      "textAlignCenter": "Aliniază Textul Central",
+      "textAlignRight": "Aliniază Textul la Dreapta",
+      "highlightLinks": "Evidențiază Linkuri",
+      "highlightTitles": "Evidențiază Titluri",
+      "letterSpacing": "Spațierea Literelor",
+      "wordsSpacing": "Spațierea Cuvintelor",
+      "lineHeight": "Înălțimea Liniei",
+      "zoom": "Zoom"
+    },
+    "colors": {
+      "title": "Ajustare Culori",
+      "blueLightFilter": "Filtru de Lumină Albastră",
+      "brightnessControl": "Controlul Luminozității",
+      "darkContrast": "Contrast Întunecat",
+      "highContrast": "Contrast Înalt",
+      "highSaturation": "Saturație Înaltă",
+      "lightContrast": "Contrast Luminos",
+      "lowSaturation": "Saturație Scăzută",
+      "monochrom": "Monocrom",
+      "textColorPicker": "Selector de Culoare a Textului",
+      "visualImpairment": "Deficiență Vizuală"
+    },
+    "tools": {
+      "title": "Instrumente",
+      "bigCursor": "Cursor Mare",
+      "readingGuide": "Ghid de Citire",
+      "textToSpeach": "Text în Vorbit",
+      "textToSpeachTooltip": "Pentru a activa 'Text în Vorbit', apăsați pe acest buton, selectați limba preferată, apoi evidențiați textul în acea limbă."
+    }
+  }
+  

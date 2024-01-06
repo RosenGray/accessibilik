@@ -1,0 +1,39 @@
+{
+    "accessibility-menu": "辅助功能菜单",
+    "content": {
+      "title": "内容调整",
+      "adjustFontSize": "调整字体大小",
+      "dyslexiaFont": "适合读写障碍的字体",
+      "fontWeight": "字体粗细",
+      "textAlignLeft": "文本左对齐",
+      "textAlignCenter": "文本居中对齐",
+      "textAlignRight": "文本右对齐",
+      "highlightLinks": "高亮链接",
+      "highlightTitles": "高亮标题",
+      "letterSpacing": "字间距",
+      "wordsSpacing": "词间距",
+      "lineHeight": "行高",
+      "zoom": "缩放"
+    },
+    "colors": {
+      "title": "颜色调整",
+      "blueLightFilter": "蓝光过滤",
+      "brightnessControl": "亮度控制",
+      "darkContrast": "暗色对比",
+      "highContrast": "高对比度",
+      "highSaturation": "高饱和度",
+      "lightContrast": "亮色对比",
+      "lowSaturation": "低饱和度",
+      "monochrom": "单色",
+      "textColorPicker": "文本颜色选择器",
+      "visualImpairment": "视觉障碍"
+    },
+    "tools": {
+      "title": "工具",
+      "bigCursor": "大光标",
+      "readingGuide": "阅读指南",
+      "textToSpeach": "文本转语音",
+      "textToSpeachTooltip": "要激活'文本转语音'，请点击此按钮，然后选择您偏好的语言，并突出显示该语言的文本。"
+    }
+  }
+  

@@ -1,0 +1,39 @@
+{
+    "accessibility-menu": "منوی دسترس‌پذیری",
+    "content": {
+      "title": "تنظیم محتوا",
+      "adjustFontSize": "تنظیم اندازه فونت",
+      "dyslexiaFont": "فونت دیسلکسی",
+      "fontWeight": "وزن فونت",
+      "textAlignLeft": "تراز متن به چپ",
+      "textAlignCenter": "تراز متن به مرکز",
+      "textAlignRight": "تراز متن به راست",
+      "highlightLinks": "برجسته‌سازی لینک‌ها",
+      "highlightTitles": "برجسته‌سازی عناوین",
+      "letterSpacing": "فاصله حروف",
+      "wordsSpacing": "فاصله کلمات",
+      "lineHeight": "ارتفاع خط",
+      "zoom": "بزرگنمایی"
+    },
+    "colors": {
+      "title": "تنظیم رنگ",
+      "blueLightFilter": "فیلتر نور آبی",
+      "brightnessControl": "کنترل روشنایی",
+      "darkContrast": "کنتراست تیره",
+      "highContrast": "کنتراست بالا",
+      "highSaturation": "اشباع بالا",
+      "lightContrast": "کنتراست روشن",
+      "lowSaturation": "اشباع پایین",
+      "monochrom": "تک‌رنگ",
+      "textColorPicker": "انتخاب‌گر رنگ متن",
+      "visualImpairment": "نقص بینایی"
+    },
+    "tools": {
+      "title": "ابزارها",
+      "bigCursor": "نشانگر بزرگ",
+      "readingGuide": "راهنمای خواندن",
+      "textToSpeach": "متن به گفتار",
+      "textToSpeachTooltip": "برای فعال‌سازی 'متن به گفتار'، بر روی این دکمه کلیک کنید، سپس زبان مورد نظر خود را انتخاب کنید و متن مربوطه را در آن زبان برجسته کنید."
+    }
+  }
+  
