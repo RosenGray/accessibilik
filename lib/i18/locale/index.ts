@@ -1,14 +1,15 @@
-const baseUrl = 'https://accessibilik.s3.amazonaws.com/locale/';
-const loadJson = async (url:string) => {
+export const baseUrl = 'https://accessibilik.s3.amazonaws.com/locale/';
+
+export const loadJson = async (url:string) => {
   const response = await fetch(url);
   return response.json();
 }
+export type Translation = {
+  translation:string;
+}
+export type Resources = Record<string,Translation>
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const resources:any = {};
-
-
-const languageArray = [
+export const languageArray = [
   { lang: 'he', name: 'hebrew' },
   { lang: 'en', name: 'english' },
   { lang: 'ru', name: 'russian' },
@@ -47,21 +48,13 @@ const languageArray = [
   { lang: 'yo', name: 'yoruba' },
   { lang: 'sd', name: 'sindhi' }
 ];
-const promises = languageArray.map(langObj => {
-  const url = `${baseUrl}${langObj.name}.json`;
-  return loadJson(url);
-});
 
-Promise.all(promises).then((langs) => {
-  languageArray.forEach((item,index) => {
-    resources[item.lang] = {
-      translation:langs[index]
-    }
-  })
-})
-
-
-export default resources;
+export const getLanguagePromises = () => {
+  return languageArray.map(langObj => {
+    const url = `${baseUrl}${langObj.name}.json`;
+    return loadJson(url);
+  });
+}
 
 export const languages = [
   "en-US",

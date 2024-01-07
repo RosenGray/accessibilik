@@ -24,6 +24,7 @@ interface AccessibilityMenuProps {
   onInit: () => void;
   onShow: () => void;
   showAcc: boolean;
+  hasLanguages:boolean;
 }
 
 const AccessibilityMenu: FC<AccessibilityMenuProps> = ({
@@ -35,6 +36,7 @@ const AccessibilityMenu: FC<AccessibilityMenuProps> = ({
   nodeListUpdated,
   onShow,
   showAcc,
+  hasLanguages
 }) => {
   const [collapsedState, setCollapsedState] =
     useState<CollapsedState>(collapsedStateInit);
@@ -62,7 +64,7 @@ const AccessibilityMenu: FC<AccessibilityMenuProps> = ({
         <Header onShow={onShow} onInit={onInit} />
         <Select
           className={styled["acc-lang-select-container"]}
-          options={langOptions}
+          options={hasLanguages ? langOptions : [langOptions[0]]}
           value={langMap[language]}
           onChange={(lang) => lang && onLangChange(lang.value)}
           ref={selectRef}

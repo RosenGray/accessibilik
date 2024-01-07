@@ -53,11 +53,15 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc --p ./tsconfig-build.json && vite build && npm run uglify && rm ./dist/main.js",
+    "buildUmd": "tsc --p ./tsconfig-build.json && vite build && npm run uglifyUmd && rm ./dist/accessibilik.umd.cjs",
     "uglify": "uglifyjs ./dist/main.js -o ./dist/main.min.js --compress --mangle",
+    "uglifyUmd": "uglifyjs ./dist/accessibilik.umd.cjs -o ./dist/accessibilik.umd.min.cjs --compress --mangle",
     "prepublishOnly": "npm run build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+  
+  
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

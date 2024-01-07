@@ -1,0 +1,38 @@
+{
+    "accessibility-menu": "Accessibility menu",
+    "content": {
+        "title": "Content adjustment",
+        "adjustFontSize": "Adjust Font Size",
+        "dyslexiaFont": "Dyslexia Font",
+        "fontWeight": "Font Weight",
+        "textAlignLeft": "Text Align Left",
+        "textAlignCenter": "Text Align Center",
+        "textAlignRight": "Text Align Right",
+        "highlightLinks": "Highlight Links",
+        "highlightTitles": "Highlight Titles",
+        "letterSpacing": "Letter Spacing",
+        "wordsSpacing": "Words Spacing",
+        "lineHeight": "Line Height",
+        "zoom": "Zoom"
+    },
+    "colors": {
+        "title": "Color adjustment",
+        "blueLightFilter": "Blue Light Filter",
+        "brightnessControl": "Brightness Control",
+        "darkContrast": "Dark Contrast",
+        "highContrast": "High Contrast",
+        "highSaturation": "High Saturation",
+        "lightContrast": "Light Contrast",
+        "lowSaturation": "Low Saturation",
+        "monochrom": "Monochrom",
+        "textColorPicker": "Text Color Picker",
+        "visualImpairment": "Visual Impairment"
+    },
+    "tools": {
+        "title": "Tools",
+        "bigCursor": "Big Cursor",
+        "readingGuide": "Reading Guide",
+        "textToSpeach": "Text To Speach",
+        "textToSpeachTooltip": "In order to activate 'Text To Speech', please click this button, after which you will have to select your preferred language, and then highlight the text in that language."
+    }
+}

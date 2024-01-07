@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { useLocalStorage } from "@uidotdev/usehooks";
 import { produce } from "immer";
 import styles from "./Accessibilik.module.scss";
@@ -14,23 +14,20 @@ import i18n from "i18next";
 import { ChangeAccDraftHander } from "../../types";
 import { getAccInitState } from "../../utils";
 import { initReactI18next } from "react-i18next";
-import langResources,{languages,rtlLanguages} from './../../i18/locale';
+import {
+  Resources,
+  getLanguagePromises,
+  languageArray,
+  languages,
+  rtlLanguages,
+} from "./../../i18/locale";
+import en from "../../i18/locale/en.json";
 
-i18n
-  .use(LanguageDetector)
-  .use(initReactI18next)
-  .init({
-    debug: true,
-    fallbackLng: "he-IL",
-    interpolation: {
-      escapeValue: false, // not needed for react as it escapes by default
-    },
-    resources:langResources,
-  });
-
-i18n.languages = languages;
+i18n.use(LanguageDetector).use(initReactI18next);
 
 const Accessibilik: FC = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasLanguages, setHasLanguages] = useState(false);
   const isTraversing = useFontSizeTraverse();
   const nodeListUpdated = useFontSizeMutationObserver();
   const [accState, setAccState] = useLocalStorage(
@@ -38,9 +35,8 @@ const Accessibilik: FC = () => {
     getAccInitState()
   );
   const [showAcc, setShowAcc] = useState(false);
-
-  const direction = rtlLanguages.includes(accState.language) ? 'rtl' : 'ltr';
-
+  const isGettingReady = isTraversing || isLoading;
+  const direction = rtlLanguages.includes(accState.language) ? "rtl" : "ltr";
 
   const changeLanguageHandler = (langCode: string) => {
     i18n.changeLanguage(langCode, () => {
@@ -63,8 +59,43 @@ const Accessibilik: FC = () => {
   const renderAccHandler = () => {
     setShowAcc((p) => !p);
   };
+  console.log("hasLanguages", hasLanguages);
 
-  if (isTraversing) return null;
+  useEffect(() => {
+    const promises = getLanguagePromises();
+    const resources: Resources = {};
+    Promise.all(promises)
+      .then((langs) => {
+        languageArray.forEach((item, index) => {
+          resources[item.lang] = {
+            translation: langs[index],
+          };
+        });
+        i18n.init({
+          // debug: true,
+          fallbackLng: "he-IL",
+          resources,
+        });
+        i18n.languages = languages;
+        setHasLanguages(true);
+      })
+      .catch((err) => {
+        console.log(err);
+        i18n.init({
+          fallbackLng: "en",
+          resources: {
+            en: {
+              translation: en,
+            },
+          },
+        });
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  }, []);
+  if (isGettingReady)
+    return <AccessibilityButton showSpinner={isGettingReady} />;
 
   return (
     <Portal wrapperElementId={PORTAL_APP_ID}>
@@ -85,6 +116,7 @@ const Accessibilik: FC = () => {
           onInit={initAccessibilikStateHandler}
           nodeListUpdated={nodeListUpdated}
           onShow={renderAccHandler}
+          hasLanguages={hasLanguages}
         />
       </div>
     </Portal>

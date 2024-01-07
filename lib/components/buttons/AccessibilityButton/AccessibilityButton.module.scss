@@ -1,5 +1,5 @@
 .AccessibilityIcon {
-  background-color: var( --primary-color);
+  background-color: var(--primary-color);
   width: 70px;
   height: 70px;
   display: flex;
@@ -13,12 +13,17 @@
   bottom: 20px;
   transition: 0.3s;
   cursor: pointer;
+  &.showSpinner {
+    cursor: auto;
+    animation: spin 2.5s linear infinite;
+  }
+
   &:hover {
     transform: scale(1.2);
   }
 
   & > svg {
-    fill: var( --white);
+    fill: var(--white);
     width: 75%;
     z-index: 1;
   }
@@ -31,8 +36,17 @@
     width: 80%;
     height: 80%;
     border: 2px solid white;
-    background-color: var( --primary-color);
+    background-color: var(--primary-color);
     z-index: 0;
     transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
