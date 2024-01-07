@@ -35,7 +35,7 @@
     "Reading Guide",
     "Text To Speech"
   ],
-  "version": "1.0.6",
+  "version": "1.0.7",
   "type": "module",
   "main": "dist/main.cjs.min.js",
   "module": "dist/main.es.min.js",
@@ -60,8 +60,6 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
-  
-  
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
