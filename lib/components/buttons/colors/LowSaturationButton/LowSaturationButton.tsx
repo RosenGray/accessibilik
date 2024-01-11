@@ -1,10 +1,9 @@
 import { FC, useLayoutEffect } from "react";
-import styled from "./LowSaturationButton.module.scss";
 import { AccessibilikState, ChangeAccDraftHander } from "../../../../types";
 import HighSaturationIcon from "./../../../../assets/icons/highSaturation.svg?react";
 import AccButton from "../../AccButton/AccButton";
 import RcSlider from "../../../RcSlider/RcSlider";
-import AccValueControlButton from "../../AccValueControlButton/AccValueControlButton";
+import AccValueControl from "../../AccValueControl/AccValueControl";
 
 const styleID = "acc-low-saturation-style";
 const rootClass = "acc-low-saturation";
@@ -35,7 +34,7 @@ const LowSaturationButton: FC<LowSaturationButtonProps> = ({
       }
     });
   };
-  const initLowSaturationHandler = () => {
+  const toggleLowSaturationHandler = () => {
     onChangeAccState((draft) => {
       const isActive = !draft.lowSaturation.isLowSaturation;
       draft.lowSaturation.isLowSaturation = isActive;
@@ -71,34 +70,29 @@ const LowSaturationButton: FC<LowSaturationButtonProps> = ({
     };
   }, [isLowSaturation, saturation]);
 
+  const renderControlButtons = () => {
+    if (!isLowSaturation) return null;
+    return (
+      <AccValueControl
+        onIncrease={increaseLowSaturationHandler}
+        onToggle={toggleLowSaturationHandler}
+        onDescrease={decreaseLowSaturationHandler}
+      />
+    );
+  };
+
   return (
     <AccButton
       Icon={HighSaturationIcon}
       titleTranslationKey="colors.lowSaturation"
-      elementType="div"
       title="Low Saturation"
-      stats={isLowSaturation ? `${saturation}%` :undefined}
-      styleIcon={{transform:"rotate(180deg)"}}
+      stats={isLowSaturation ? `${saturation}%` : undefined}
+      styleIcon={{ transform: "rotate(180deg)" }}
+      elementType={!isLowSaturation ? "button" : "div"}
+      isActive={isLowSaturation}
+      onToggle={!isLowSaturation ? toggleLowSaturationHandler : undefined}
     >
-      <div className={styled.accLowSituration}>
-        {isLowSaturation && (
-          <AccValueControlButton
-            onClick={increaseLowSaturationHandler}
-            controlType="increase"
-          />
-        )}
-        <AccValueControlButton
-          onClick={initLowSaturationHandler}
-          controlType="init"
-        />
-
-        {isLowSaturation && (
-          <AccValueControlButton
-            onClick={decreaseLowSaturationHandler}
-            controlType="decrease"
-          />
-        )}
-      </div>
+      {renderControlButtons()}
       {isLowSaturation && (
         <RcSlider
           range

@@ -2,9 +2,8 @@ import { FC, useLayoutEffect } from "react";
 import { AccessibilikState, ChangeAccDraftHander } from "../../../../types";
 import AccButton from "../../AccButton/AccButton";
 import HighContrastIcon from "./../../../../assets/icons/highcontrast.svg?react";
-import styled from "./HighContrast.module.scss";
-import AccValueControlButton from "../../AccValueControlButton/AccValueControlButton";
 import RcSlider from "../../../RcSlider/RcSlider";
+import AccValueControl from "../../AccValueControl/AccValueControl";
 
 const styleID = "acc-high-contrast-style";
 const rootClass = "acc-high-contrast";
@@ -60,7 +59,7 @@ const HighContrastButton: FC<HighContrastButtonProps> = ({
       }
     });
   };
-  const initHighContrastHandler = () => {
+  const toggleHighContrastHandler = () => {
     onChangeAccState((draft) => {
       const isActive = !draft.highContrast.isHighContrast;
       draft.highContrast.isHighContrast = isActive;
@@ -68,33 +67,29 @@ const HighContrastButton: FC<HighContrastButtonProps> = ({
     });
   };
 
+  const renderControlButtons = () => {
+    if (!isHighContrast) return null;
+    return (
+      <AccValueControl
+        onIncrease={increaseHighContrastHandler}
+        onToggle={toggleHighContrastHandler}
+        onDescrease={decreaseHighContrastHandler}
+      />
+    );
+  };
+
   return (
     <AccButton
       Icon={HighContrastIcon}
       titleTranslationKey="colors.highContrast"
-      elementType="div"
       title="High Contrast"
-      stats={isHighContrast ? `${contrast}%` :undefined}
+      stats={isHighContrast ? `${contrast}%` : undefined}
+      elementType={!isHighContrast ? "button" : "div"}
+      isActive={isHighContrast}
+      onToggle={!isHighContrast ? toggleHighContrastHandler : undefined}
     >
-      <div className={styled.accHighContrast}>
-        {isHighContrast && (
-          <AccValueControlButton
-            onClick={increaseHighContrastHandler}
-            controlType="increase"
-          />
-        )}
-        <AccValueControlButton
-          onClick={initHighContrastHandler}
-          controlType="init"
-        />
+      {renderControlButtons()}
 
-        {isHighContrast && (
-          <AccValueControlButton
-            onClick={decreaseHighContrastHandler}
-            controlType="decrease"
-          />
-        )}
-      </div>
       {isHighContrast && (
         <RcSlider
           range

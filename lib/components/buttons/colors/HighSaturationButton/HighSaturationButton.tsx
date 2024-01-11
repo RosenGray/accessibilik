@@ -1,10 +1,9 @@
 import { FC, useLayoutEffect } from "react";
-import styled from "./HighSaturationButton.module.scss";
 import { AccessibilikState, ChangeAccDraftHander } from "../../../../types";
 import HighSaturationIcon from "./../../../../assets/icons/highSaturation.svg?react";
 import AccButton from "../../AccButton/AccButton";
 import RcSlider from "../../../RcSlider/RcSlider";
-import AccValueControlButton from "../../AccValueControlButton/AccValueControlButton";
+import AccValueControl from "../../AccValueControl/AccValueControl";
 
 const styleID = "acc-high-saturation-style";
 const rootClass = "acc-high-saturation";
@@ -36,13 +35,25 @@ const HighSaturationButton: FC<HighSaturationButtonProps> = ({
       }
     });
   };
-  const initHighSaturationHandler = () => {
+  const toggleHighSaturationHandler = () => {
     onChangeAccState((draft) => {
       const isActive = !draft.highSaturation.isHighSaturation;
       draft.highSaturation.isHighSaturation = isActive;
       draft.highSaturation.saturation = isActive ? 200 : 0;
     });
   };
+
+  const renderControlButtons = () => {
+    if (!isHighSaturation) return null;
+    return (
+      <AccValueControl
+        onIncrease={increaseHighSaturationHandler}
+        onToggle={toggleHighSaturationHandler}
+        onDescrease={decreaseHighSaturationHandler}
+      />
+    );
+  };
+
   useLayoutEffect(() => {
     if (isHighSaturation) {
       document.documentElement.classList.add(rootClass);
@@ -71,29 +82,14 @@ const HighSaturationButton: FC<HighSaturationButtonProps> = ({
     <AccButton
       Icon={HighSaturationIcon}
       titleTranslationKey="colors.highSaturation"
-      elementType="div"
       title="High Saturation"
-      stats={isHighSaturation ? `${saturation}%` :undefined}
+      stats={isHighSaturation ? `${saturation}%` : undefined}
+      elementType={!isHighSaturation ? "button" : "div"}
+      isActive={isHighSaturation}
+      onToggle={!isHighSaturation ? toggleHighSaturationHandler : undefined}
     >
-      <div className={styled.accHighSaturation}>
-        {isHighSaturation && (
-          <AccValueControlButton
-            onClick={increaseHighSaturationHandler}
-            controlType="increase"
-          />
-        )}
-        <AccValueControlButton
-          onClick={initHighSaturationHandler}
-          controlType="init"
-        />
+      {renderControlButtons()}
 
-        {isHighSaturation && (
-          <AccValueControlButton
-            onClick={decreaseHighSaturationHandler}
-            controlType="decrease"
-          />
-        )}
-      </div>
       {isHighSaturation && (
         <RcSlider
           range

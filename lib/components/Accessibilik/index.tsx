@@ -59,7 +59,6 @@ const Accessibilik: FC = () => {
   const renderAccHandler = () => {
     setShowAcc((p) => !p);
   };
-  console.log("hasLanguages", hasLanguages);
 
   useEffect(() => {
     const promises = getLanguagePromises();
@@ -79,8 +78,7 @@ const Accessibilik: FC = () => {
         i18n.languages = languages;
         setHasLanguages(true);
       })
-      .catch((err) => {
-        console.log(err);
+      .catch((_err) => {
         i18n.init({
           fallbackLng: "en",
           resources: {

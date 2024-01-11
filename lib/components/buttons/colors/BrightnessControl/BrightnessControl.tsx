@@ -36,7 +36,7 @@ const BrightnessControl: FC<BrightnessControlProps> = ({
       }
     });
   };
-  const initBrightnessHandler = () => {
+  const toggleBrightnessHandler = () => {
     onChangeAccState((draft) => {
       const isActive = !draft.brightness.isBrightness;
       draft.brightness.isBrightness = isActive;
@@ -68,36 +68,41 @@ const BrightnessControl: FC<BrightnessControlProps> = ({
     };
   }, [isBrightness, brightness]);
 
+  const renderControlButtons = () => {
+    if (!isBrightness) return null;
+    return (
+      <div className={styled.accBrightnessControl}>
+        <AccValueControlButton
+          onClick={increaseBrightnessHandler}
+          controlType="increase"
+        />
+
+        <AccValueControlButton
+          onClick={toggleBrightnessHandler}
+          controlType="init"
+        />
+
+        <AccValueControlButton
+          onClick={decreaseBrightnessHandler}
+          controlType="decrease"
+        />
+      </div>
+    );
+  };
+
   return (
     <AccButton
       Icon={LightModeSharpIcon}
       titleTranslationKey="colors.brightnessControl"
-      elementType="div"
       title="Brightness Control"
-      stats={isBrightness ? `${brightness}%` :undefined}
+      elementType={!isBrightness ? "button" : "div"}
+      isActive={isBrightness}
+      onToggle={!isBrightness ? toggleBrightnessHandler : undefined}
+      stats={isBrightness ? `${brightness}%` : undefined}
     >
-      <div className={styled.accBrightnessControl}>
-        {isBrightness && (
-          <AccValueControlButton
-            onClick={increaseBrightnessHandler}
-            controlType="increase"
-          />
-        )}
-        <AccValueControlButton
-          onClick={initBrightnessHandler}
-          controlType="init"
-        />
-
-        {isBrightness && (
-          <AccValueControlButton
-            onClick={decreaseBrightnessHandler}
-            controlType="decrease"
-          />
-        )}
-      </div>
+      {renderControlButtons()}
       {isBrightness && (
         <RcSlider
-          // vertical
           range
           min={150}
           max={500}

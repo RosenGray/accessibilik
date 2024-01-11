@@ -1,10 +1,9 @@
 import { FC, useLayoutEffect } from "react";
-import styled from "./LetterSpacingButton.module.scss";
 import { AccessibilikState, ChangeAccDraftHander } from "../../../../types";
 import { PORTAL_APP_ID } from "../../../../constants";
 import AccButton from "../../AccButton/AccButton";
-import AccValueControlButton from "../../AccValueControlButton/AccValueControlButton";
-import EightMpIcon from './../../../../assets/icons/letterSpacing.svg?react';
+import EightMpIcon from "./../../../../assets/icons/letterSpacing.svg?react";
+import AccValueControl from "../../AccValueControl/AccValueControl";
 
 const styleID = "acc-letter-spacing-style";
 const rootClass = "acc-letter-spacing";
@@ -19,6 +18,7 @@ const LetterSpacingButton: FC<LetterSpacingButtonProps> = ({
   onChangeAccState,
 }) => {
   const { letterSpacing } = accState;
+  const isLetterSpacing = !!letterSpacing;
 
   const increaseLetterSpacingHandler = () => {
     onChangeAccState((draft) => {
@@ -27,19 +27,20 @@ const LetterSpacingButton: FC<LetterSpacingButtonProps> = ({
   };
   const decreaseLetterSpacingHandler = () => {
     onChangeAccState((draft) => {
-      if(draft.letterSpacing > 0){
-        draft.letterSpacing--
+      if (draft.letterSpacing > 0) {
+        draft.letterSpacing--;
       }
     });
   };
-  const initLetterSpacingHandler = () => {
+  const toggleLetterSpacingHandler = () => {
     onChangeAccState((draft) => {
-      draft.letterSpacing = 0;
+      const { letterSpacing } = draft;
+      draft.letterSpacing = !letterSpacing ? 1 : 0;
     });
   };
 
   useLayoutEffect(() => {
-    if (letterSpacing) {
+    if (isLetterSpacing) {
       document.documentElement.classList.add(rootClass);
       const style = document.createElement("style");
       style.id = styleID;
@@ -55,23 +56,32 @@ const LetterSpacingButton: FC<LetterSpacingButtonProps> = ({
       document.documentElement.classList.remove(rootClass);
       style?.remove();
     };
-  }, [letterSpacing]);
+  }, [letterSpacing, isLetterSpacing]);
+
+  const renderControlButtons = () => {
+    if (!isLetterSpacing) return null;
+    return (
+      <AccValueControl
+        onIncrease={increaseLetterSpacingHandler}
+        onToggle={toggleLetterSpacingHandler}
+        onDescrease={decreaseLetterSpacingHandler}
+      />
+    );
+  };
 
   return (
     <AccButton
-    elementType="div"
-    Icon={EightMpIcon}
-    titleTranslationKey={"content.letterSpacing"}
-    title="Letter Spacing"
-    stats={letterSpacing ? `${letterSpacing}px` : undefined}
-  >
-    <div className={styled.accLetterSpacing}>
-      <AccValueControlButton onClick={increaseLetterSpacingHandler} controlType="increase" />
-      <AccValueControlButton onClick={initLetterSpacingHandler} controlType="init" />
-      <AccValueControlButton onClick={decreaseLetterSpacingHandler} controlType="decrease" />
-    </div>
-  </AccButton>
-  )
+      Icon={EightMpIcon}
+      titleTranslationKey={"content.letterSpacing"}
+      title="Letter Spacing"
+      stats={letterSpacing ? `${letterSpacing}px` : undefined}
+      elementType={!isLetterSpacing ? "button" : "div"}
+      isActive={isLetterSpacing}
+      onToggle={!isLetterSpacing ? toggleLetterSpacingHandler : undefined}
+    >
+      {renderControlButtons()}
+    </AccButton>
+  );
 };
 
 export default LetterSpacingButton;

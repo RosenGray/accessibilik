@@ -2,8 +2,7 @@ import { FC, useLayoutEffect } from "react";
 import { AccessibilikState, ChangeAccDraftHander } from "../../../../types";
 import AccButton from "../../AccButton/AccButton";
 import TextIncreaseIcon from "./../../../../assets/icons/adjustFontSize.svg?react";
-import AccValueControlButton from "../../AccValueControlButton/AccValueControlButton";
-import styled from "./AdjustFontSize.module.scss";
+import AccValueControl from "../../AccValueControl/AccValueControl";
 
 const getNodesByDataAttrAndAdjustFontSize = (
   dataAttr: string,
@@ -78,11 +77,11 @@ const AdjustFontSize: FC<AdjustFontSizeProps> = ({
       title="Adjust Font Size"
       stats={`${adjustFontSizePercentage}%`}
     >
-      <div className={styled.accAdjustFontSize}>
-        <AccValueControlButton onClick={increaseFontSizeHandler} controlType="increase" />
-        <AccValueControlButton onClick={initFontSizeHandler} controlType="init" />
-        <AccValueControlButton onClick={decreaseFontSizeHandler} controlType="decrease" />
-      </div>
+      <AccValueControl
+        onIncrease={increaseFontSizeHandler}
+        onToggle={initFontSizeHandler}
+        onDescrease={decreaseFontSizeHandler}
+      />
     </AccButton>
   );
 };

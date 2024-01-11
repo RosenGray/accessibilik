@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { CSSProperties, FC } from "react";
 import styles from "./AccValueControlButton.module.scss";
 import RestartAltIcon from "./../../../assets/icons/init.svg?react";
 import AddIcon from "./../../../assets/icons/add.svg?react";
@@ -9,13 +9,15 @@ export type ValueControlType = "init" | "increase" | "decrease";
 interface AccValueControlButtonProps {
   controlType: ValueControlType;
   onClick?: () => void;
+  style?: CSSProperties;
 }
 
 const AccValueControlButton: FC<AccValueControlButtonProps> = ({
   controlType,
   onClick,
+  style,
 }) => {
-  let Icon:IconSvgComponent;
+  let Icon: IconSvgComponent;
   switch (controlType) {
     case "increase":
       Icon = AddIcon;
@@ -31,7 +33,11 @@ const AccValueControlButton: FC<AccValueControlButtonProps> = ({
   }
 
   return (
-    <button onClick={onClick} className={styles.accValueControlButton}>
+    <button
+      style={style}
+      onClick={onClick}
+      className={styles.accValueControlButton}
+    >
       <Icon />
     </button>
   );

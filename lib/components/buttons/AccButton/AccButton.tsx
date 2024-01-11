@@ -28,6 +28,7 @@ const DynamicButton: FC<DynamicButtonProps> = ({
 interface AccButtonProps {
   Icon: IconSvgComponent;
   isToggled?: boolean;
+  isActive?:boolean;
   children?: ReactNode;
   onToggle?: () => void;
   titleTranslationKey: string;
@@ -42,6 +43,7 @@ interface AccButtonProps {
 const AccButton: FC<AccButtonProps> = ({
   Icon,
   isToggled,
+  isActive,
   children,
   onToggle,
   titleTranslationKey,
@@ -56,6 +58,7 @@ const AccButton: FC<AccButtonProps> = ({
   const { t } = useTranslation();
   const containerClass = classNames(`${styles.accButton} ${className}`, {
     [styles.isToggled]: isToggled,
+    [styles.isActive]: isActive,
   });
 
   const renderTooltip = () => {

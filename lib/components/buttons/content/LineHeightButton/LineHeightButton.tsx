@@ -32,7 +32,7 @@ const LineHeightButton: FC<LineHeightButtonProps> = ({
       }
     });
   };
-  const lineHeighInitHandler = () => {
+  const lineHeighToggleHandler = () => {
     onChangeAccState((draft) => {
       const isActive = !draft.lineHeight.isLineHeight;
       draft.lineHeight.isLineHeight = isActive;
@@ -59,14 +59,9 @@ const LineHeightButton: FC<LineHeightButtonProps> = ({
     };
   }, [lineHeight, isLineHeight]);
 
-  return (
-    <AccButton
-      elementType="div"
-      Icon={TextRotateUpIcon}
-      titleTranslationKey={"content.lineHeight"}
-      title="Line Height"
-      stats={lineHeight ? `${(lineHeight * 100).toFixed(0)}%`: undefined}
-    >
+  const renderControlButtons = () => {
+    if (!isLineHeight) return null;
+    return (
       <div className={styled.accLineHeightButton}>
         {isLineHeight && (
           <AccValueControlButton
@@ -75,7 +70,7 @@ const LineHeightButton: FC<LineHeightButtonProps> = ({
           />
         )}
         <AccValueControlButton
-          onClick={lineHeighInitHandler}
+          onClick={lineHeighToggleHandler}
           controlType="init"
         />
         {isLineHeight && (
@@ -85,6 +80,20 @@ const LineHeightButton: FC<LineHeightButtonProps> = ({
           />
         )}
       </div>
+    );
+  };
+
+  return (
+    <AccButton
+      Icon={TextRotateUpIcon}
+      titleTranslationKey={"content.lineHeight"}
+      title="Line Height"
+      elementType={!isLineHeight ? "button" : "div"}
+      isActive={isLineHeight}
+      onToggle={!isLineHeight ? lineHeighToggleHandler : undefined}
+      stats={lineHeight ? `${(lineHeight * 100).toFixed(0)}%`: undefined}
+    >
+      {renderControlButtons()}
     </AccButton>
   );
 };

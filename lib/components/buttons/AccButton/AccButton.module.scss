@@ -17,10 +17,14 @@
   }
   &.isToggled {
     background-color: var(--primary-color);
+    border-color: var(--primary-color);
     color: #fff;
     svg {
       fill: #fff;
     }
+  }
+  &.isActive{
+    border-color: var(--primary-color);
   }
   &__title {
     font-size: 15px;

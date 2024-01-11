@@ -1,10 +1,9 @@
 import { FC, useLayoutEffect } from "react";
-import styled from "./WordSpacingButton.module.scss";
 import { AccessibilikState, ChangeAccDraftHander } from "../../../../types";
 import { PORTAL_APP_ID } from "../../../../constants";
 import AccButton from "../../AccButton/AccButton";
 import MenuBookIcon from "./../../../../assets/icons/wordSpacing.svg?react";
-import AccValueControlButton from "../../AccValueControlButton/AccValueControlButton";
+import AccValueControl from "../../AccValueControl/AccValueControl";
 
 const styleID = "acc-word-spacing-style";
 const rootClass = "acc-word-spacing";
@@ -19,6 +18,7 @@ const WordSpacingButton: FC<WordSpacingButtonProps> = ({
   onChangeAccState,
 }) => {
   const { wordSpacing } = accState;
+  const isWordSpacing = !!wordSpacing;
 
   const increaseWordSpacingHandler = () => {
     onChangeAccState((draft) => {
@@ -32,14 +32,15 @@ const WordSpacingButton: FC<WordSpacingButtonProps> = ({
       }
     });
   };
-  const initWordSpacingHandler = () => {
+  const toggleWordSpacingHandler = () => {
     onChangeAccState((draft) => {
-      draft.wordSpacing = 0;
+      const { wordSpacing } = draft;
+      draft.wordSpacing = !wordSpacing ? 1 : 0;
     });
   };
 
   useLayoutEffect(() => {
-    if (wordSpacing) {
+    if (isWordSpacing) {
       document.documentElement.classList.add(rootClass);
       const style = document.createElement("style");
       style.id = styleID;
@@ -55,30 +56,30 @@ const WordSpacingButton: FC<WordSpacingButtonProps> = ({
       document.documentElement.classList.remove(rootClass);
       style?.remove();
     };
-  }, [wordSpacing]);
+  }, [wordSpacing,isWordSpacing]);
+
+  const renderControlButtons = () => {
+    if (!isWordSpacing) return null;
+    return (
+      <AccValueControl
+        onIncrease={increaseWordSpacingHandler}
+        onToggle={toggleWordSpacingHandler}
+        onDescrease={decreaseWordSpacingHandler}
+      />
+    );
+  };
 
   return (
     <AccButton
-      elementType="div"
       Icon={MenuBookIcon}
       titleTranslationKey={"content.wordsSpacing"}
       title="Word Spacing"
       stats={wordSpacing ? `${wordSpacing}px` : undefined}
+      elementType={!isWordSpacing ? "button" : "div"}
+      isActive={isWordSpacing}
+      onToggle={!isWordSpacing ? toggleWordSpacingHandler : undefined}
     >
-      <div className={styled.accWordSpacing}>
-        <AccValueControlButton
-          onClick={increaseWordSpacingHandler}
-          controlType="increase"
-        />
-        <AccValueControlButton
-          onClick={initWordSpacingHandler}
-          controlType="init"
-        />
-        <AccValueControlButton
-          onClick={decreaseWordSpacingHandler}
-          controlType="decrease"
-        />
-      </div>
+      {renderControlButtons()}
     </AccButton>
   );
 };
