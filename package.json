@@ -47,8 +47,7 @@
   ],
   "version": "1.0.11",
   "type": "module",
-  "main": "dist/main.cjs.min.js",
-  "module": "dist/main.es.min.js",
+  "main": "dist/main.min.js",
   "types": "dist/main.d.ts",
   "files": [
     "dist"
