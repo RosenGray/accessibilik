@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from "react";
-import { useLocalStorage } from "@uidotdev/usehooks";
+import { useSessionStorage } from "@uidotdev/usehooks";
 import { produce } from "immer";
 import styles from "./Accessibilik.module.scss";
 import AccessibilityButton from "../buttons/AccessibilityButton/AccessibilityButton";
@@ -31,7 +31,7 @@ const Accessibilik: FC = () => {
   const [hasLanguages, setHasLanguages] = useState(false);
   const isTraversing = useFontSizeTraverse();
   const nodeListUpdated = useFontSizeMutationObserver();
-  const [accState, setAccState] = useLocalStorage<AccessibilikState>(
+  const [accState, setAccState] = useSessionStorage<AccessibilikState>(
     ACC_LOCAL_STORAGE_KEY,
     getAccInitState()
   );
@@ -60,14 +60,6 @@ const Accessibilik: FC = () => {
   const renderAccHandler = () => {
     setShowAcc((p) => !p);
   };
-
-  useEffect(() => {
-    const _accState  = localStorage.getItem(ACC_LOCAL_STORAGE_KEY);
-    if(_accState){
-      setAccState(null);
-      setAccState(getAccInitState());
-    }
-  },[]);
 
   useEffect(() => {
     const promises = getLanguagePromises();
@@ -101,7 +93,7 @@ const Accessibilik: FC = () => {
         setIsLoading(false);
       });
   }, []);
-  
+
   if (isGettingReady)
     return <AccessibilityButton showSpinner={isGettingReady} />;
 
