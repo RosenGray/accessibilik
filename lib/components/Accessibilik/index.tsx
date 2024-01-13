@@ -11,7 +11,7 @@ import { APP_ID, PORTAL_APP_ID } from "../../constants";
 import LanguageDetector from "i18next-browser-languagedetector";
 import Portal from "../Portal/Portal";
 import i18n from "i18next";
-import { ChangeAccDraftHander } from "../../types";
+import { AccessibilikState, ChangeAccDraftHander } from "../../types";
 import { getAccInitState } from "../../utils";
 import { initReactI18next } from "react-i18next";
 import {
@@ -24,14 +24,15 @@ import {
 import en from "../../i18/locale/en.json";
 
 i18n.use(LanguageDetector).use(initReactI18next);
+const ACC_LOCAL_STORAGE_KEY = 'accessibilik'
 
 const Accessibilik: FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasLanguages, setHasLanguages] = useState(false);
   const isTraversing = useFontSizeTraverse();
   const nodeListUpdated = useFontSizeMutationObserver();
-  const [accState, setAccState] = useLocalStorage(
-    "accessibilik",
+  const [accState, setAccState] = useLocalStorage<AccessibilikState>(
+    ACC_LOCAL_STORAGE_KEY,
     getAccInitState()
   );
   const [showAcc, setShowAcc] = useState(false);
@@ -59,6 +60,14 @@ const Accessibilik: FC = () => {
   const renderAccHandler = () => {
     setShowAcc((p) => !p);
   };
+
+  useEffect(() => {
+    const _accState  = localStorage.getItem(ACC_LOCAL_STORAGE_KEY);
+    if(_accState){
+      setAccState(null);
+      setAccState(getAccInitState());
+    }
+  },[]);
 
   useEffect(() => {
     const promises = getLanguagePromises();
@@ -92,6 +101,7 @@ const Accessibilik: FC = () => {
         setIsLoading(false);
       });
   }, []);
+  
   if (isGettingReady)
     return <AccessibilityButton showSpinner={isGettingReady} />;
 

@@ -1,4 +1,4 @@
-export const baseUrl = 'https://accessibilik.s3.amazonaws.com/locale/';
+export const baseUrl = 'https://rosengray.github.io/static/locale/';
 
 export const loadJson = async (url:string) => {
   const response = await fetch(url);
@@ -100,4 +100,6 @@ export const languages = [
 
 
 export const rtlLanguages = ["ar", "fa", "he", "he-IL", "ur"];
+
+
 
