@@ -45,7 +45,7 @@
     "accessibility component",
     "accessibility widget"
   ],
-  "version": "1.0.10",
+  "version": "1.0.11",
   "type": "module",
   "main": "dist/main.cjs.min.js",
   "module": "dist/main.es.min.js",
