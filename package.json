@@ -2,7 +2,7 @@
   "name": "accessibilik",
   "author": "Vladi Iokhim",
   "license": "MIT",
-  "description": "A React-based web accessibility widget to enhance UI/UX for all users.",
+  "description": "A React-based web accessibility widget to enhance UI/UX for all users. This powerful tool seamlessly integrates with React applications, offering a wide range of features like adjustable font sizes, text alignment options, dyslexia-friendly fonts, and color contrast adjustments. It's equipped with advanced functionalities including a BlueLight filter, brightness control, text-to-speech, and a zoom button, ensuring an optimal viewing experience for users with visual impairments. With Accessibilik, developers can easily adhere to the latest web accessibility standards (WCAG), enhancing the UI/UX for diverse audiences. Ideal for creating universally accessible web applications, Accessibilik is your go-to solution for making the web more accessible to everyone.",
   "keywords": [
     "accessibility",
     "web-accessibility",
@@ -43,7 +43,16 @@
     "accessibility for React",
     "accessibility React component",
     "accessibility component",
-    "accessibility widget"
+    "accessibility widget",
+    "WCAG compliance",
+    "User-friendly web accessibility",
+    "Inclusive web design",
+    "React JS accessibility",
+    "Accessible user interface",
+    "Web inclusivity tools",
+    "User experience enhancement",
+    "Web accessibility standards",
+    "Universal web access solutions"
   ],
   "version": "1.0.12",
   "type": "module",
