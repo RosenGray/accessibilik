@@ -2,7 +2,7 @@
 
 ![Banner Image](banner.png)
 
-[![NPM](https://img.shields.io/npm/v/accessibilik.svg)](https://www.npmjs.com/package/accessibilik)
+[![NPM](https://img.shields.io/npm/v/accessibility-react-widget.svg)](https://www.npmjs.com/package/accessibility-react-widget)
 [![GitHub license](https://img.shields.io/github/license/RosenGray/accessibilik)](https://github.com/RosenGray/accessibilik/blob/master/LICENSE)
 
 
