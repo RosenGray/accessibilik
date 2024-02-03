@@ -1,4 +1,4 @@
-# ♿  Accessibilik: accessibility widget.
+# ♿  Accessibilik: React Accessibility Widget.
 
 ![Banner Image](banner.png)
 
@@ -10,14 +10,14 @@
 Accessibilik: A React-based web accessibility widget to enhance UI/UX for all users.
 
 ```
-yarn add accessibilik
-npm install accessibilik
+yarn add accessibility-react-widget
+npm install accessibility-react-widget
 ```
 
 Then use it in your app:
 
 ```js
-import Accessibilik from 'accessibilik';
+import Accessibilik from 'accessibility-react-widget';
 
 export default function App() {
 
@@ -86,14 +86,14 @@ export default function App() {
 🎤 **Text To Speech**: Converts written text on the website into spoken words, facilitating access for users with visual impairments, reading difficulties, or those who prefer auditory learning.
 
 ```
-yarn add accessibilik
-npm install accessibilik
+yarn add accessibility-react-widget
+npm install accessibility-react-widget
 ```
 
 Then use it in your app:
 
 ```js
-import Accessibilik from 'accessibilik';
+import Accessibilik from 'accessibility-react-widget';
 
 export default function App() {
 
