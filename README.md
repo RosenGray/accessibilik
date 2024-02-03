@@ -11,6 +11,9 @@ Accessibilik: A React-based web accessibility widget to enhance UI/UX for all us
 
 ```
 yarn add accessibility-react-widget
+```
+Or
+```
 npm install accessibility-react-widget
 ```
 
