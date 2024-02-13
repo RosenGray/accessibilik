@@ -3,42 +3,42 @@ const DYSLEXIA_FONT_STYLE = `
 
 @font-face {
     font-family: 'OpenDyslexic';
-    src: url('https://rosengray.github.io/static/fonts/OpenDyslexic-Bold.woff') format('woff');
+    src: url('https://acc-landing.vercel.app/fonts/OpenDyslexic-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'OpenDyslexic';
-    src: url('https://rosengray.github.io/static/fonts/OpenDyslexic3-Bold.ttf') format('truetype');
+    src: url('https://acc-landing.vercel.app/fonts/OpenDyslexic3-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'OpenDyslexic';
-    src: url('https://rosengray.github.io/static/fonts/OpenDyslexic3-Regular.ttf') format('truetype');
+    src: url('https://acc-landing.vercel.app/fonts/OpenDyslexic3-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'OpenDyslexic';
-    src: url('https://rosengray.github.io/static/fonts/OpenDyslexic-Regular.woff') format('woff');
+    src: url('https://acc-landing.vercel.app/fonts/OpenDyslexic-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'OpenDyslexic';
-    src: url('https://rosengray.github.io/static/fonts/OpenDyslexic-Regular.otf') format('opentype');
+    src: url('https://acc-landing.vercel.app/fonts/OpenDyslexic-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'OpenDyslexic';
-    src: url('https://rosengray.github.io/static/fonts/OpenDyslexic-Bold.otf') format('opentype');
+    src: url('https://acc-landing.vercel.app/fonts/OpenDyslexic-Bold.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
 }
