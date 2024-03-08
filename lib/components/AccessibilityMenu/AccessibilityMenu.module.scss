@@ -1,5 +1,5 @@
 .accAccessibilityMenu {
-  &__overlay{
+  &__overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -9,38 +9,44 @@
   }
 }
 
-.accMenu{
+.accMenu {
   position: fixed;
   inset-inline-start: 20px;
-  bottom:100px;
+  bottom: 100px;
   border-radius: 10px;
   box-shadow: 0 0 20px #00000080;
   opacity: 1;
-  transition: .3s;
+  transition: 0.3s;
   z-index: 500000000000000000;
   overflow: hidden;
-  background:#F9F9F9;// #e9eff4;
-  width: 500px;
+  background: #f9f9f9; // #e9eff4;
+  width: 100%;
+  max-width: 500px;
   line-height: 1;
   font-size: 16px;
-  letter-spacing: .015em;
+  letter-spacing: 0.015em;
   display: flex;
   flex-direction: column;
   [class$="-control"] {
     border-radius: 0;
-    border:.3px solid #2C2639;
+    border: 0.3px solid #2c2639;
   }
   [class$="-indicatorContainer"] {
-    svg{
-      fill:#2C2639;
+    svg {
+      fill: #2c2639;
     }
   }
   [class$="-indicatorSeparator"] {
-    background-color: #2C2639;
+    background-color: #2c2639;
   }
   [class$="-menu"] {
     margin-top: 0;
     z-index: 100;
   }
+  @media screen and (max-width: 540px) {
+    inset-inline-start: 0;
+    max-width: 100%;
+    top: 0;
+    border-radius: 0;
+  }
 }
-
