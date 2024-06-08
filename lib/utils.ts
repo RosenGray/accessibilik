@@ -46,3 +46,25 @@ export const isRuleAppliedToElement = (
       activateTextToSpeech:false
     }
   }
+
+export const registerDomain = async () => {
+  try {
+    const data = {
+      domain: window.location.hostname,
+      created: new Date().toISOString(),
+    };
+
+    const response = await fetch("https://acc-landing.vercel.app/api/registerDomain", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    const resData = await response.json();
+    console.log(resData);
+  } catch (err) {
+    //err
+  }
+};
