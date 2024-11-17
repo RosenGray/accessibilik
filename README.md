@@ -16,6 +16,11 @@ Or
 ```
 npm install accessibility-react-widget
 ```
+Or
+```
+<script defer src="https://acc-landing.vercel.app/accessibilik.min.js"></script>
+```
+
 
 Then use it in your app:
 
