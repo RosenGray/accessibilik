@@ -46,7 +46,8 @@ export const languageArray = [
   { lang: 'th', name: 'thai' },
   { lang: 'nl', name: 'dutch' },
   { lang: 'yo', name: 'yoruba' },
-  { lang: 'sd', name: 'sindhi' }
+  { lang: 'sd', name: 'sindhi' },
+  { lang: 'lv', name: 'latviski' }
 ];
 
 export const getLanguagePromises = () => {
@@ -95,6 +96,7 @@ export const languages = [
   "nl",
   "yo",
   "sd",
+  "lv",
 ];
 
 
