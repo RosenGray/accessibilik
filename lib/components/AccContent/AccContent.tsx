@@ -13,22 +13,13 @@ import LineHeightButton from "../buttons/content/LineHeightButton/LineHeightButt
 import ZoomButton from "../buttons/content/ZoomButton/ZoomButton";
 
 interface AccContentProps {
-  nodeListUpdated: number;
   accState: AccessibilikState;
   onChangeAccState: (fn: ChangeAccDraftHander) => void;
 }
-const AccContent: FC<AccContentProps> = ({
-  nodeListUpdated,
-  accState,
-  onChangeAccState,
-}) => {
+const AccContent: FC<AccContentProps> = ({ accState, onChangeAccState }) => {
   return (
     <>
-      <AdjustFontSize
-        nodeListUpdated={nodeListUpdated}
-        accState={accState}
-        onChangeAccState={onChangeAccState}
-      />
+      <AdjustFontSize accState={accState} onChangeAccState={onChangeAccState} />
       <DyslexiaFontButton
         accState={accState}
         onChangeAccState={onChangeAccState}
@@ -75,7 +66,7 @@ const AccContent: FC<AccContentProps> = ({
         accState={accState}
         onChangeAccState={onChangeAccState}
       />
-      
+
       <ZoomButton accState={accState} onChangeAccState={onChangeAccState} />
     </>
   );
