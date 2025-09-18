@@ -1,10 +1,8 @@
 import { defineConfig } from "vite";
-import { extname, relative, resolve } from "path";
+import { resolve } from "path";
 import react from "@vitejs/plugin-react";
 import dts from "vite-plugin-dts";
 import { libInjectCss } from "vite-plugin-lib-inject-css";
-import { fileURLToPath } from "node:url";
-import { glob } from "glob";
 import svgr from "vite-plugin-svgr";
 import { terser } from "rollup-plugin-terser";
 

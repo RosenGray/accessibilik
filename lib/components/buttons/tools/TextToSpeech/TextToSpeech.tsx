@@ -52,7 +52,7 @@ const TextToSpeech: FC<TextToSpeechProps> = ({
     return () => {
       window.clearTimeout(timer);
     };
-  }, [activateTextToSpeech]);
+  }, [activateTextToSpeech, language]);
 
   useEffect(() => {
     if (!activateTextToSpeech) return;

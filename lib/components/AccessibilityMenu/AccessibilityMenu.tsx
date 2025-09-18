@@ -42,7 +42,7 @@ const AccessibilityMenu: FC<AccessibilityMenuProps> = ({
     useState<CollapsedState>(collapsedStateInit);
   const { language } = accState;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const selectRef = useRef<any>();
+  const selectRef = useRef<any>(null);
   useEffect(() => {
     if (selectRef.current) {
       selectRef.current.focus();
