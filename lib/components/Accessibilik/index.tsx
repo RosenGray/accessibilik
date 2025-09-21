@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from "react";
 import { useSessionStorage } from "@uidotdev/usehooks";
 import { produce } from "immer";
-import styles from "./Accessibilik.module.scss";
+import styles from "./accessibilik.module.scss";
 import AccessibilityButton from "../buttons/AccessibilityButton/AccessibilityButton";
 import AccessibilityMenu from "../AccessibilityMenu/AccessibilityMenu";
 import useFontSizeTraverse from "../../hooks/useFontSizeTraverse";
@@ -82,7 +82,7 @@ const Accessibilik: FC = () => {
         i18n.languages = languages;
         setHasLanguages(true);
       })
-      .catch((_err) => {
+      .catch(() => {
         i18n.init({
           fallbackLng: "en",
           resources: {
