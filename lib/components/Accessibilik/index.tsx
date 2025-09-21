@@ -22,9 +22,11 @@ import {
   rtlLanguages,
 } from "./../../i18/locale";
 import en from "../../i18/locale/en.json";
+import usePersistenceLayout from "../../hooks/usePersistenceLayout/usePersistenceLayout";
 
 i18n.use(LanguageDetector).use(initReactI18next);
-const ACC_LOCAL_STORAGE_KEY = 'accessibilik'
+const ACC_LOCAL_STORAGE_KEY = "accessibilik";
+const READING_GUIDE_PORTAL_ID = "acc-portal-[readingGuide-container]";
 
 const Accessibilik: FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -37,6 +39,7 @@ const Accessibilik: FC = () => {
   );
   const [showAcc, setShowAcc] = useState(false);
   const isGettingReady = isTraversing || isLoading;
+  usePersistenceLayout({ accState, isGettingReady, nodeListUpdated });
   const direction = rtlLanguages.includes(accState.language) ? "rtl" : "ltr";
 
   const changeLanguageHandler = (langCode: string) => {
@@ -99,28 +102,30 @@ const Accessibilik: FC = () => {
     return <AccessibilityButton showSpinner={isGettingReady} />;
 
   return (
-    <Portal wrapperElementId={PORTAL_APP_ID}>
-      <div
-        id={APP_ID}
-        style={{ direction, fontSize: 50 }}
-        className={styles.Accessibilik}
-        data-acc-language={accState.language}
-      >
-        <AccessibilityButton onShow={renderAccHandler} />
+    <>
+      <Portal wrapperElementId={READING_GUIDE_PORTAL_ID}>.</Portal>
+      <Portal wrapperElementId={PORTAL_APP_ID}>
+        <div
+          id={APP_ID}
+          style={{ direction, fontSize: 50 }}
+          className={styles.Accessibilik}
+          data-acc-language={accState.language}
+        >
+          <AccessibilityButton onShow={renderAccHandler} />
 
-        <AccessibilityMenu
-          display={showAcc ? "block" : "none"}
-          showAcc={showAcc}
-          accState={accState}
-          onLangChange={changeLanguageHandler}
-          onChangeAccState={changeAccessibilikStateHandler}
-          onInit={initAccessibilikStateHandler}
-          nodeListUpdated={nodeListUpdated}
-          onShow={renderAccHandler}
-          hasLanguages={hasLanguages}
-        />
-      </div>
-    </Portal>
+          <AccessibilityMenu
+            display={showAcc ? "block" : "none"}
+            showAcc={showAcc}
+            accState={accState}
+            onLangChange={changeLanguageHandler}
+            onChangeAccState={changeAccessibilikStateHandler}
+            onInit={initAccessibilikStateHandler}
+            onShow={renderAccHandler}
+            hasLanguages={hasLanguages}
+          />
+        </div>
+      </Portal>
+    </>
   );
 };
 

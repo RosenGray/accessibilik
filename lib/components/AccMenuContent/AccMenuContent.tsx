@@ -8,14 +8,12 @@ import styled from "./AccMenuContent.module.scss";
 import { CollapsedState, CollapsedStateKeys } from "../../config";
 
 interface AccMenuContentProps {
-  nodeListUpdated: number;
   accState: AccessibilikState;
   onChangeAccState: (fn: ChangeAccDraftHander) => void;
   onCollapse: (name: CollapsedStateKeys) => void;
   collapsedState: CollapsedState;
 }
 const AccMenuContent: FC<AccMenuContentProps> = ({
-  nodeListUpdated,
   accState,
   onChangeAccState,
   onCollapse,
@@ -35,11 +33,7 @@ const AccMenuContent: FC<AccMenuContentProps> = ({
         Icon={collapsedState.content.icon}
         tKey="content.title"
       >
-        <AccContent
-          nodeListUpdated={nodeListUpdated}
-          accState={accState}
-          onChangeAccState={onChangeAccState}
-        />
+        <AccContent accState={accState} onChangeAccState={onChangeAccState} />
       </AccMenuContentBlock>
       <AccMenuContentBlock
         isAccMenuContentActive={!isAccMenuContentNotActive}

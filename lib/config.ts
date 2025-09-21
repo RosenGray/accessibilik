@@ -40,7 +40,8 @@ export const langOptions = [
   { label: "ไทย", value: "th" }, // Thai
   { label: "Nederlands", value: "nl" }, // Dutch
   { label: "Yorùbá", value: "yo" }, // Yoruba
-  { label: "سنڌي", value: "sd" }  // Sindhi
+  { label: "سنڌي", value: "sd" }, // Sindhi
+  { label: "Latviešu", value: "lv" }, // Latvian
 ];
 
 export const langMap = langOptions.reduce((acc, item) => {

@@ -1,12 +1,9 @@
-import { FC, useLayoutEffect } from "react";
+import { FC } from "react";
 import { AccessibilikState, ChangeAccDraftHander } from "../../../../types";
 import HighSaturationIcon from "./../../../../assets/icons/highSaturation.svg?react";
 import AccButton from "../../AccButton/AccButton";
 import RcSlider from "../../../RcSlider/RcSlider";
 import AccValueControl from "../../AccValueControl/AccValueControl";
-
-const styleID = "acc-high-saturation-style";
-const rootClass = "acc-high-saturation";
 
 interface HighSaturationButtonProps {
   accState: AccessibilikState;
@@ -53,30 +50,6 @@ const HighSaturationButton: FC<HighSaturationButtonProps> = ({
       />
     );
   };
-
-  useLayoutEffect(() => {
-    if (isHighSaturation) {
-      document.documentElement.classList.add(rootClass);
-      const style = document.createElement("style");
-      style.id = styleID;
-      style.innerHTML = `
-                   html.${rootClass} {
-                    -o-filter: saturate(${saturation}%) !important;
-                    -ms-filter: saturate(${saturation}%) !important;
-                    -moz-filter: saturate(${saturation}%) !important;
-                    -webkit-filter: saturate(${saturation}%) !important;
-                    filter: saturate(${saturation}%) !important;
-                }
-            `;
-      document.head.appendChild(style);
-    }
-
-    return () => {
-      const style = document.getElementById(styleID);
-      document.documentElement.classList.remove(rootClass);
-      style?.remove();
-    };
-  }, [isHighSaturation, saturation]);
 
   return (
     <AccButton

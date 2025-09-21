@@ -1,12 +1,8 @@
-import { FC, useLayoutEffect } from "react";
+import { FC } from "react";
 import { AccessibilikState, ChangeAccDraftHander } from "../../../../types";
-import { PORTAL_APP_ID } from "../../../../constants";
 import AccButton from "../../AccButton/AccButton";
 import EightMpIcon from "./../../../../assets/icons/letterSpacing.svg?react";
 import AccValueControl from "../../AccValueControl/AccValueControl";
-
-const styleID = "acc-letter-spacing-style";
-const rootClass = "acc-letter-spacing";
 
 interface LetterSpacingButtonProps {
   accState: AccessibilikState;
@@ -38,25 +34,6 @@ const LetterSpacingButton: FC<LetterSpacingButtonProps> = ({
       draft.letterSpacing = !letterSpacing ? 1 : 0;
     });
   };
-
-  useLayoutEffect(() => {
-    if (isLetterSpacing) {
-      document.documentElement.classList.add(rootClass);
-      const style = document.createElement("style");
-      style.id = styleID;
-      style.innerHTML = `
-                  html.${rootClass} *:not(#${PORTAL_APP_ID} *), *:not(#${PORTAL_APP_ID} *)  {
-                  letter-spacing:${letterSpacing}px !important;
-                }
-            `;
-      document.head.appendChild(style);
-    }
-    return () => {
-      const style = document.getElementById(styleID);
-      document.documentElement.classList.remove(rootClass);
-      style?.remove();
-    };
-  }, [letterSpacing, isLetterSpacing]);
 
   const renderControlButtons = () => {
     if (!isLetterSpacing) return null;

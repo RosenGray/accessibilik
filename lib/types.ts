@@ -1,7 +1,7 @@
 import {Draft} from 'immer';
 export type ChangeAccDraftHander = (d: Draft<AccessibilikState>) =>void;
 
-interface TextAlign {
+export interface TextAlign {
   left:string | null;
   center:string | null;
   right:string | null;

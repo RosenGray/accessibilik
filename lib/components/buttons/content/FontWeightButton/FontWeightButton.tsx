@@ -1,10 +1,7 @@
-import { FC, useLayoutEffect } from "react";
+import { FC } from "react";
 import { AccessibilikState, ChangeAccDraftHander } from "../../../../types";
 import FormatBoldIcon from "./../../../../assets/icons/fontWeight.svg?react";
 import AccButton from "../../AccButton/AccButton";
-
-const styleID = "acc-font-weight-style";
-const rootClass = "acc-font-weight";
 
 interface FontWeightButtonProps {
   accState: AccessibilikState;
@@ -22,25 +19,6 @@ const FontWeightButton: FC<FontWeightButtonProps> = ({
       draft.isFontWeightBold = !draft.isFontWeightBold;
     });
   };
-
-  useLayoutEffect(() => {
-    if (isFontWeightBold) {
-      document.documentElement.classList.add(rootClass);
-      const style = document.createElement("style");
-      style.id = styleID;
-      style.innerHTML = `
-                  html.${rootClass} *, *  {
-                  font-weight:700 !important;
-                }
-            `;
-      document.head.appendChild(style);
-    }
-    return () => {
-      const style = document.getElementById(styleID);
-      document.documentElement.classList.remove(rootClass);
-      style?.remove();
-    };
-  }, [isFontWeightBold]);
 
   return (
     <AccButton

@@ -16,7 +16,6 @@ import {
 } from "../../config";
 
 interface AccessibilityMenuProps {
-  nodeListUpdated: number;
   display: string;
   accState: AccessibilikState;
   onChangeAccState: (fn: ChangeAccDraftHander) => void;
@@ -33,7 +32,6 @@ const AccessibilityMenu: FC<AccessibilityMenuProps> = ({
   onInit,
   onLangChange,
   onChangeAccState,
-  nodeListUpdated,
   onShow,
   showAcc,
   hasLanguages
@@ -71,7 +69,6 @@ const AccessibilityMenu: FC<AccessibilityMenuProps> = ({
         />
         <AccMenuContent
           onCollapse={toggleCollapseHandler}
-          nodeListUpdated={nodeListUpdated}
           accState={accState}
           onChangeAccState={onChangeAccState}
           collapsedState={collapsedState}

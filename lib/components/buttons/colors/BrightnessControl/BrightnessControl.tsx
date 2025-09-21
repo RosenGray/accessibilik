@@ -1,13 +1,10 @@
-import { FC, useLayoutEffect } from "react";
+import { FC } from "react";
 import styled from "./BrightnessControl.module.scss";
 import { AccessibilikState, ChangeAccDraftHander } from "../../../../types";
 import AccButton from "../../AccButton/AccButton";
 import LightModeSharpIcon from "./../../../../assets/icons/brightness.svg?react";
 import AccValueControlButton from "../../AccValueControlButton/AccValueControlButton";
 import RcSlider from "../../../RcSlider/RcSlider";
-
-const styleID = "acc-brightness-control-style";
-const rootClass = "acc-brightness-control";
 
 interface BrightnessControlProps {
   accState: AccessibilikState;
@@ -43,30 +40,6 @@ const BrightnessControl: FC<BrightnessControlProps> = ({
       draft.brightness.brightness = isActive ? 150 : 0;
     });
   };
-
-  useLayoutEffect(() => {
-    if (isBrightness) {
-      document.documentElement.classList.add(rootClass);
-      const style = document.createElement("style");
-      style.id = styleID;
-      style.innerHTML = `
-                   html.${rootClass} {
-                    -o-filter: brightness(${brightness}%) !important;
-                    -ms-filter: brightness(${brightness}%) !important;
-                    -moz-filter: brightness(${brightness}%) !important;
-                    -webkit-filter: brightness(${brightness}%) !important;
-                    filter: brightness(${brightness}%) !important;
-                }
-            `;
-      document.head.appendChild(style);
-    }
-
-    return () => {
-      const style = document.getElementById(styleID);
-      document.documentElement.classList.remove(rootClass);
-      style?.remove();
-    };
-  }, [isBrightness, brightness]);
 
   const renderControlButtons = () => {
     if (!isBrightness) return null;

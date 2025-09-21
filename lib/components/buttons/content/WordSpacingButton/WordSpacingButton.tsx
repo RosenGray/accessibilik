@@ -1,12 +1,8 @@
-import { FC, useLayoutEffect } from "react";
+import { FC } from "react";
 import { AccessibilikState, ChangeAccDraftHander } from "../../../../types";
-import { PORTAL_APP_ID } from "../../../../constants";
 import AccButton from "../../AccButton/AccButton";
 import MenuBookIcon from "./../../../../assets/icons/wordSpacing.svg?react";
 import AccValueControl from "../../AccValueControl/AccValueControl";
-
-const styleID = "acc-word-spacing-style";
-const rootClass = "acc-word-spacing";
 
 interface WordSpacingButtonProps {
   accState: AccessibilikState;
@@ -19,7 +15,6 @@ const WordSpacingButton: FC<WordSpacingButtonProps> = ({
 }) => {
   const { wordSpacing } = accState;
   const isWordSpacing = !!wordSpacing;
-
   const increaseWordSpacingHandler = () => {
     onChangeAccState((draft) => {
       draft.wordSpacing++;
@@ -38,25 +33,6 @@ const WordSpacingButton: FC<WordSpacingButtonProps> = ({
       draft.wordSpacing = !wordSpacing ? 1 : 0;
     });
   };
-
-  useLayoutEffect(() => {
-    if (isWordSpacing) {
-      document.documentElement.classList.add(rootClass);
-      const style = document.createElement("style");
-      style.id = styleID;
-      style.innerHTML = `
-                 html.${rootClass} *:not(#${PORTAL_APP_ID} *), *:not(#${PORTAL_APP_ID} *)  {
-                  word-spacing:${wordSpacing}px !important;
-                }
-            `;
-      document.head.appendChild(style);
-    }
-    return () => {
-      const style = document.getElementById(styleID);
-      document.documentElement.classList.remove(rootClass);
-      style?.remove();
-    };
-  }, [wordSpacing,isWordSpacing]);
 
   const renderControlButtons = () => {
     if (!isWordSpacing) return null;

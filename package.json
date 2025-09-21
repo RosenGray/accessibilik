@@ -54,7 +54,7 @@
     "Web accessibility standards",
     "Universal web access solutions"
   ],
-  "version": "1.0.8",
+  "version": "2.0.1",
   "type": "module",
   "main": "dist/main.min.js",
   "types": "dist/main.d.ts",
@@ -119,6 +119,7 @@
     "rc-slider": "^10.5.0",
     "react-colorful": "^5.6.1",
     "react-i18next": "^13.5.0",
+    "react-router": "^7.5.0",
     "react-select": "^5.8.0"
   }
 }

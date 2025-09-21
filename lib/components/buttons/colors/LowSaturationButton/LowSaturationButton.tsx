@@ -1,12 +1,9 @@
-import { FC, useLayoutEffect } from "react";
+import { FC } from "react";
 import { AccessibilikState, ChangeAccDraftHander } from "../../../../types";
 import HighSaturationIcon from "./../../../../assets/icons/highSaturation.svg?react";
 import AccButton from "../../AccButton/AccButton";
 import RcSlider from "../../../RcSlider/RcSlider";
 import AccValueControl from "../../AccValueControl/AccValueControl";
-
-const styleID = "acc-low-saturation-style";
-const rootClass = "acc-low-saturation";
 
 interface LowSaturationButtonProps {
   accState: AccessibilikState;
@@ -41,34 +38,6 @@ const LowSaturationButton: FC<LowSaturationButtonProps> = ({
       draft.lowSaturation.saturation = isActive ? 50 : 0;
     });
   };
-
-  useLayoutEffect(() => {
-    if (isLowSaturation) {
-      document.documentElement.classList.add(rootClass);
-      const style = document.createElement("style");
-      style.id = styleID;
-      style.innerHTML = `
-                   html.${rootClass} {
-                    -o-filter: saturate(${saturation}%) !important;
-                    -ms-filter: saturate(${saturation}%) !important;
-                    -moz-filter: saturate(${saturation}%) !important;
-                    -webkit-filter: saturate(${saturation}%) !important;
-                    filter: saturate(${saturation}%) !important;
-                }
-            `;
-      document.head.appendChild(style);
-    } else {
-      const style = document.getElementById(styleID);
-      document.documentElement.classList.remove(rootClass);
-      style?.remove();
-    }
-
-    return () => {
-      const style = document.getElementById(styleID);
-      document.documentElement.classList.remove(rootClass);
-      style?.remove();
-    };
-  }, [isLowSaturation, saturation]);
 
   const renderControlButtons = () => {
     if (!isLowSaturation) return null;
