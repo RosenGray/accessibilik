@@ -8,7 +8,7 @@ module.exports = {
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
-  parseOptions:{
+  parserOptions:{
     tsconfigRootDir: __dirname
   },
   plugins: ['react-refresh'],
