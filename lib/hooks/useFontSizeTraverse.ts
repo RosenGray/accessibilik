@@ -12,38 +12,43 @@ const useFontSizeTraverse = (hasHydrated: boolean) => {
   useLayoutEffect(() => {
     if (!hasHydrated) return;
 
-    const allElements = document.querySelectorAll("*");
+    const runTraverse = () => {
+      const allElements = document.querySelectorAll("*");
 
-    allElements.forEach((element) => {
-      const elem = element as HTMLElement;
-      // Check inline styles
-      if (elem.style.fontSize) {
-        getComputedStyleAndSetAccDataFontSize(elem);
-      }
+      allElements.forEach((element) => {
+        const elem = element as HTMLElement;
+        // Check inline styles
+        if (elem.style.fontSize) {
+          getComputedStyleAndSetAccDataFontSize(elem);
+        }
 
-      Array.from(document.styleSheets).forEach((sheet) => {
-        try {
-          Array.from(sheet.cssRules || []).forEach((rule) => {
-            const _rule = rule as CSSStyleRule;
-            if (_rule.style.fontSize && isRuleAppliedToElement(elem, _rule)) {
-              getComputedStyleAndSetAccDataFontSize(elem);
-            }
-          });
-        } catch (error) {
-          //
+        Array.from(document.styleSheets).forEach((sheet) => {
+          try {
+            Array.from(sheet.cssRules || []).forEach((rule) => {
+              const _rule = rule as CSSStyleRule;
+              if (_rule.style.fontSize && isRuleAppliedToElement(elem, _rule)) {
+                getComputedStyleAndSetAccDataFontSize(elem);
+              }
+            });
+          } catch (error) {
+            //
+          }
+        });
+
+        //elmenet has no font size inline or stylesheet
+        if (elem) {
+          const tag = elem.tagName.toLowerCase();
+          if (textTags.includes(tag)) {
+            getComputedStyleAndSetAccDataFontSize(elem);
+          }
         }
       });
 
-      //elmenet has no font size inline or stylesheet
-      if (elem) {
-        const tag = elem.tagName.toLowerCase();
-        if (textTags.includes(tag)) {
-          getComputedStyleAndSetAccDataFontSize(elem);
-        }
-      }
-    });
+      setIsTraversing(false);
+    };
 
-    setIsTraversing(false);
+    const rafId = requestAnimationFrame(runTraverse);
+    return () => cancelAnimationFrame(rafId);
   }, [hasHydrated]);
   return isTraversing;
 };
