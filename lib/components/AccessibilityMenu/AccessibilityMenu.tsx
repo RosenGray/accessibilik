@@ -66,6 +66,7 @@ const AccessibilityMenu: FC<AccessibilityMenuProps> = ({
           className={styled["acc-lang-select-container"]}
           options={hasLanguages ? langOptions : [langOptions[0]]}
           value={langMap[language]}
+          // @ts-expect-error react-select types are not compatible with react-19
           onChange={(lang) => lang && onLangChange(lang.value)}
           ref={selectRef}
         />
