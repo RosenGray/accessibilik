@@ -30,11 +30,16 @@ const READING_GUIDE_PORTAL_ID = "acc-portal-[readingGuide-container]";
 const Accessibilik: FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasLanguages, setHasLanguages] = useState(false);
-  const isTraversing = useFontSizeTraverse();
-  const nodeListUpdated = useFontSizeMutationObserver();
+  const [hasHydrated, setHasHydrated] = useState(false);
+  const isTraversing = useFontSizeTraverse(hasHydrated);
+  const nodeListUpdated = useFontSizeMutationObserver(hasHydrated);
   const [accState, setAccState] = useAccSessionState();
   const [showAcc, setShowAcc] = useState(false);
-  const isGettingReady = isTraversing || isLoading;
+  const isGettingReady = isTraversing || isLoading || !hasHydrated;
+
+  useEffect(() => {
+    setHasHydrated(true);
+  }, []);
   usePersistenceLayout({ accState, isGettingReady, nodeListUpdated });
   const direction = rtlLanguages.includes(accState.language) ? "rtl" : "ltr";
 

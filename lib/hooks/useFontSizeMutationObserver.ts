@@ -5,9 +5,11 @@ import {
 } from "../utils";
 import { APP_ID, PORTAL_APP_ID, textTags } from "../constants";
 
-const useFontSizeMutationObserver = () => {
-  const [nodeListUpdated,setNodeListUpdated] = useState(0);
+const useFontSizeMutationObserver = (hasHydrated: boolean) => {
+  const [nodeListUpdated, setNodeListUpdated] = useState(0);
   useLayoutEffect(() => {
+    if (!hasHydrated) return;
+
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
         if (mutation.type === "childList" && mutation.addedNodes.length > 0) {
@@ -61,12 +63,12 @@ const useFontSizeMutationObserver = () => {
 
     // Clean up
     return () => {
-      setNodeListUpdated(0)
+      setNodeListUpdated(0);
       observer.disconnect();
     };
-  }, [nodeListUpdated]);
+  }, [hasHydrated]);
 
-  return nodeListUpdated
+  return nodeListUpdated;
 };
 
 export default useFontSizeMutationObserver;

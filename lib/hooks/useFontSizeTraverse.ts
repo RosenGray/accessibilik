@@ -6,10 +6,12 @@ import {
 } from "../utils";
 import { textTags } from "../constants";
 
-const useFontSizeTraverse = () => {
+const useFontSizeTraverse = (hasHydrated: boolean) => {
   const [isTraversing, setIsTraversing] = useState(true);
 
   useLayoutEffect(() => {
+    if (!hasHydrated) return;
+
     const allElements = document.querySelectorAll("*");
 
     allElements.forEach((element) => {
@@ -42,8 +44,8 @@ const useFontSizeTraverse = () => {
     });
 
     setIsTraversing(false);
-  }, []);
-  return  isTraversing 
+  }, [hasHydrated]);
+  return isTraversing;
 };
 
 export default useFontSizeTraverse;
