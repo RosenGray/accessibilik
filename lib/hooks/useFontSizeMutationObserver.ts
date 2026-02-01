@@ -10,6 +10,39 @@ const useFontSizeMutationObserver = (hasHydrated: boolean) => {
   useLayoutEffect(() => {
     if (!hasHydrated) return;
 
+    const processElement = (elem: HTMLElement) => {
+      if (elem.id === PORTAL_APP_ID || elem.id === APP_ID) return;
+
+      if (elem.style.fontSize) {
+        getComputedStyleAndSetAccDataFontSize(elem);
+        elem.dataset.accMutation = `true`;
+        setNodeListUpdated((p) => ++p);
+      }
+      Array.from(document.styleSheets).forEach((sheet) => {
+        try {
+          Array.from(sheet.cssRules || []).forEach((rule) => {
+            const _rule = rule as CSSStyleRule;
+            if (
+              _rule.style.fontSize &&
+              isRuleAppliedToElement(elem, _rule)
+            ) {
+              getComputedStyleAndSetAccDataFontSize(elem);
+              elem.dataset.accMutation = `true`;
+              setNodeListUpdated((p) => ++p);
+            }
+          });
+        } catch {
+          //
+        }
+      });
+      const tag = elem.tagName.toLowerCase();
+      if (textTags.includes(tag)) {
+        getComputedStyleAndSetAccDataFontSize(elem);
+        elem.dataset.accMutation = `true`;
+        setNodeListUpdated((p) => ++p);
+      }
+    };
+
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
         if (mutation.type === "childList" && mutation.addedNodes.length > 0) {
@@ -17,39 +50,11 @@ const useFontSizeMutationObserver = (hasHydrated: boolean) => {
             if (node instanceof HTMLElement) {
               if (node.id === PORTAL_APP_ID || node.id === APP_ID) return;
 
-              // handle inline font size
-              if (node.style.fontSize) {
-                getComputedStyleAndSetAccDataFontSize(node);
-                node.dataset.accMutation = `true`;
-                setNodeListUpdated((p) => ++p);
-              }
-              // handle font size from css files
-              Array.from(document.styleSheets).forEach((sheet) => {
-                try {
-                  Array.from(sheet.cssRules || []).forEach((rule) => {
-                    const _rule = rule as CSSStyleRule;
-                    if (
-                      _rule.style.fontSize &&
-                      isRuleAppliedToElement(node, _rule)
-                    ) {
-                      getComputedStyleAndSetAccDataFontSize(node);
-                      node.dataset.accMutation = `true`;
-                      setNodeListUpdated((p) => ++p);
-                    }
-                  });
-                } catch (error) {
-                  //
-                }
-              });
-              // handle textTags that the font size was not defined
-              if (node) {
-                const tag = node.tagName.toLowerCase();
-                if (textTags.includes(tag)) {
-                  getComputedStyleAndSetAccDataFontSize(node);
-                  node.dataset.accMutation = `true`;
-                  setNodeListUpdated((p) => ++p);
-                }
-              }
+              const elements: HTMLElement[] = [
+                node,
+                ...Array.from(node.querySelectorAll("*")),
+              ].filter((el): el is HTMLElement => el instanceof HTMLElement);
+              elements.forEach(processElement);
             }
           });
         }
