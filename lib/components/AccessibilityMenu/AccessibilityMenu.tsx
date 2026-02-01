@@ -14,6 +14,7 @@ import {
   langMap,
   langOptions,
 } from "../../config";
+import { styles } from "./select.styles";
 
 interface AccessibilityMenuProps {
   display: string;
@@ -61,6 +62,7 @@ const AccessibilityMenu: FC<AccessibilityMenuProps> = ({
       <div style={{ display }} className={styled.accMenu}>
         <Header onShow={onShow} onInit={onInit} />
         <Select
+        styles={styles}
           className={styled["acc-lang-select-container"]}
           options={hasLanguages ? langOptions : [langOptions[0]]}
           value={langMap[language]}
