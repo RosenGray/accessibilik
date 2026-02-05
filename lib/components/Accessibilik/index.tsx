@@ -95,7 +95,7 @@ const Accessibilik: FC = () => {
       })
       .finally(() => {
         setIsLoading(false);
-        registerDomain();
+        // registerDomain();
       });
   }, []);
 
