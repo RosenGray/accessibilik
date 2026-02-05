@@ -11,7 +11,7 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import Portal from "../Portal/Portal";
 import i18n from "i18next";
 import { ChangeAccDraftHander } from "../../types";
-import { getAccInitState, registerDomain } from "../../utils";
+import { getAccInitState } from "../../utils";
 import { initReactI18next } from "react-i18next";
 import {
   Resources,
